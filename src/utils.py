@@ -129,13 +129,15 @@ def value(has, nB=1, nR=1, sGoal=True):
 
 def prune(rule, maxSize):
     n = 0
+    tmp = {}
     for txt in rule:
         n = n+1
         if len(rule[txt]) == maxSize[txt]:
-            n = n+1
-            rule[txt] = None
+            n = n-1
+        else:
+            tmp[txt] = rule[txt]
     if n > 0:
-        return rule
+        return tmp
     else:
         return None
 
@@ -196,35 +198,43 @@ def showRule(rule):
 def firstN(sorted_list, scoring_function):
     print("")
 
-    def print_range(r):
-        for i in r:
-            print(i['range'].txt, i['range'].min,
-                  i['range'].max, rnd(i['val']))
-    print_range(sorted_list)
+    # def print_range(r):
+    #     for i in r:
+    #         print(i['range'].txt, i['range'].min,
+    #               i['range'].max, rnd(i['val']))
+
+    # print("Printing sorted ranges")
+
+    # print_range(sorted_list)
+    # print("Printing sorted ranges complete")
+
     first = sorted_list[0]['val']
 
-    def useful(ranges):
-        if ranges['val'] > 0.05 and ranges['val'] > first/10:
-            return ranges
-    sorted_ranges = []
-    for ranges in sorted_list:
-        if (useful(ranges)):
-            sorted_ranges.append(ranges)
+    # def useful(ranges):
+    #     if ranges['val'] > 0.05 and ranges['val'] > first/10:
+    #         return ranges
+
+    # sorted_ranges = []
+    # for ranges in sorted_list:
+    #     if (useful(ranges)):
+    #         sorted_ranges.append(ranges)
+
+    sorted_ranges = [x for x in sorted_list if x['val']
+                     > .05 and x['val'] > first/10]
+
     out = []
     most = -1
     n = 1
     new_sorted_range = []
     while n <= len(sorted_ranges):
         new_sorted_range.append(sorted_ranges[n-1]['range'])
-        tmp, rule = scoring_function(new_sorted_range), None
+        tmp = scoring_function(new_sorted_range)
         # print('tmp : ', tmp)
         # print('most : ', most)
         if tmp and tmp[0] > most:
             most = tmp[0]
             out.append(tmp[1])
         n += 1
-    print("returning out : ", out)
-    print("returning most : ", most)
     return out, most
 
 
@@ -274,26 +284,18 @@ def xpln(data, best, rest):
     tmp, maxSizes = [], {}
 
     bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
-    print("Bin Ranges: ")
-    for x in bin_ranges[0]:
-        x.print()
 
     for ranges in bin_ranges:
         maxSizes[ranges[0].txt] = len(ranges)
         print("")
         for r in ranges:
             print(r.txt, " ", r.min, " ", r.max)
-            print("values in has : ", r.y.has)
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
-    
-    print("ranges printed , going to first N")
+
     sorted_list = sorted(tmp, key=lambda d: d['val'], reverse=True)
     r, most = firstN(sorted_list, score)
 
-    print("first N also completed")
-
     print("\n")
-    print("done with xpln")
     return r, most
 
 
