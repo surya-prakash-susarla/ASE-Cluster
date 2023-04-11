@@ -1,0 +1,6 @@
+➜  hw02 git:(fix-hw2) ✗ py3 main.py
+Running test :  data_read
+Exists criteria :  True
+suffix :  .csv
+Result : ✅
+➜  hw02 git:(fix-hw2) ✗
