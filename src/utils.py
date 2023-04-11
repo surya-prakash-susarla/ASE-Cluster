@@ -154,10 +154,9 @@ def showRule(rule):
             t.append({'min': t0[keys[j]]['min'], 'max': t0[keys[j]]['max']})
         return t if len(t0) == len(t) else merge(t)
 
-    def merges( ranges):
-        # print("TODO: resolve attr")
-        # print("\n\n ranges in merges:", ranges)
+    def merges(ranges):
         if (len(ranges)>=2):
+            print("items in ranges : ", ranges.items())
             ranges = sorted(ranges.items(), key = lambda d: d[1]['min'])
         if type(ranges) != dict:
             temp = {}
@@ -255,12 +254,9 @@ def xpln(data, best, rest):
             print(r.txt, " ", r.min, " ", r.max)
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
     sorted_list = sorted(tmp, key = lambda d: d['val'], reverse=True)
-    # print("sorted list : ", sorted_list)
-    # print('*'*10)
     r, most = firstN(sorted_list, score)
 
     print("\n")
-    #print("returning rule from xpln  : ", r)
     return r, most
 
 def add(col, x, n = 1):

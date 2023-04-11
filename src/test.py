@@ -17,7 +17,6 @@ def test_xpln():
     print("rule from xpln : ", rule)
     for r in rule:
         print(showRule(r))
-    
     return True
 
 def test_global_options() -> bool:
@@ -165,5 +164,17 @@ def test_half():
     print(B.cells)
     return True
 
-
+def xpln_with_n_iterations(n):
+    for i in range(20):
+        print("iteration : ", i)
+        data = Data(global_options[K_FILE])
+        best, rest, evals = data.sway()
+        print("best : ", best)
+        print("rest : ", rest)
+        print("evals : ", evals)
+        # skipping print from original source of xpln20
+        rule, most = xpln(data, best, rest)
+        print("printing rule: ")
+    print(rule)
+    return 1
 
