@@ -6,13 +6,16 @@ from test import *
 from cli import initialize_from_cli, print_help
 from globals import global_options, K_HELP, K_START_ACTION
 
+
 def generate_results() -> int:
     print("Begin generating results")
     n = 20
     return_value = xpln_with_n_iterations(n)
     return 0
 
-#### MAIN
+# MAIN
+
+
 def __main__() -> int:
     initialize_from_cli()
 
@@ -22,5 +25,5 @@ def __main__() -> int:
 
     return generate_results()
 
-sys.exit(__main__())
 
+sys.exit(__main__())
