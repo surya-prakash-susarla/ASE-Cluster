@@ -7,4 +7,9 @@ class Range:
         self.min = x
         #SYM object
         self.y = Sym(self.at, self.txt)
+    
+    def print(self):
+        print("Range for column : ", self.txt)
+        print("min value : ", self.min)
+        print("max value : ", self.max)
 

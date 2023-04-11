@@ -175,7 +175,6 @@ def showRule(rule):
 
     def merges(ranges):
         if (len(ranges) >= 2):
-            print("items in ranges : ", ranges.items())
             ranges = sorted(ranges.items(), key=lambda d: d[1]['min'])
         if type(ranges) != dict:
             temp = {}
@@ -273,16 +272,28 @@ def xpln(data, best, rest):
                 return v({'best': len(bestr), 'rest': len(restr)}), r
 
     tmp, maxSizes = [], {}
-    for ranges in data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows}):
+
+    bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
+    print("Bin Ranges: ")
+    for x in bin_ranges[0]:
+        x.print()
+
+    for ranges in bin_ranges:
         maxSizes[ranges[0].txt] = len(ranges)
         print("")
         for r in ranges:
             print(r.txt, " ", r.min, " ", r.max)
+            print("values in has : ", r.y.has)
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
+    
+    print("ranges printed , going to first N")
     sorted_list = sorted(tmp, key=lambda d: d['val'], reverse=True)
     r, most = firstN(sorted_list, score)
 
+    print("first N also completed")
+
     print("\n")
+    print("done with xpln")
     return r, most
 
 

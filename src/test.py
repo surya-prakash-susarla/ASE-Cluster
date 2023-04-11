@@ -182,14 +182,13 @@ def test_half():
 
 def xpln_with_n_iterations(n):
     for i in range(20):
-        print("iteration : ", i)
+        print('*'*20)
+        print("Iteration : ", i)
         data = Data(global_options[K_FILE])
         best, rest, evals = data.sway()
-        print("best : ", best)
-        print("rest : ", rest)
-        print("evals : ", evals)
         # skipping print from original source of xpln20
         rule, most = xpln(data, best, rest)
         print("printing rule: ")
-    print(rule)
+        print(rule)
+        print('-'*20)
     return 1

@@ -25,8 +25,6 @@ class Data:
             for row in source_rows:
                 self.add_row(row)
 
-        print("Data object created with rows : ", len(self.rows))
-
     def add_row(self, row):
         if self.cols != None:
             if type(row) is list:
