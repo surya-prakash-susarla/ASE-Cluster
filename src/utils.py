@@ -356,3 +356,8 @@ def merges(ranges0, nSmall, nFar):
     if len(ranges0) == len(ranges1):
         return noGaps(ranges0)
     return merges(ranges1, nSmall, nFar)
+
+def ysNums(out, data):
+    for col in out.values():
+        for row in data.rows:
+            col.add(row.cells[col.at])

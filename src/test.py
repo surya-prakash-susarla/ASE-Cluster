@@ -1,6 +1,6 @@
 from sym import Sym
 from num import Num
-from utils import rand, rint, rnd, show, show_tree, tree, value, xpln, showRule
+from utils import rand, rint, rnd, show, show_tree, tree, value, xpln, showRule, selects, ysNums
 from data import Data, rep_cols, rep_rows, rep_grid, rep_place, transpose, cliffsDelta
 from csv import get_csv_rows
 from collections import OrderedDict
@@ -181,13 +181,50 @@ def test_half():
 
 
 def xpln_with_n_iterations(n):
+    rules = Num()
+
+    out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None}
+
     for i in range(20):
         print('*'*20)
-        print("Iteration : ", i)
+        print("Iteration : ", i+1)
         data = Data(global_options[K_FILE])
         best, rest, evals = data.sway()
         # skipping print from original source of xpln20
         rule, most = xpln(data, best, rest)
-        print("rule : {}\nmost: {}".format(rule, most))
-        print('-'*20)
+        if len(rule) > 0:
+            print("Rule : {}\nMost: {}".format(rule, most))
+            rules.add(len(rule))
+            data1 = data.clone(data.rows)
+            data1 = data1.clone(selects(rule[0], data.rows))
+            if out['all'] == None:
+                out['all'] = {}
+                for col in data.cols.y:
+                    out['all'][col.txt] = Num(col.at, col.txt)
+            ysNums(out['all'], data)
+
+            if out['sway'] == None:
+                out['sway'] = {}
+                for col in data.cols.y:
+                    out['sway'][col.txt] = Num(col.at, col.txt)
+            ysNums(out['sway'], best)
+
+            if out['xpln'] == None:
+                out['xpln'] = {}
+                for col in data.cols.y:
+                    out['xpln'][col.txt] = Num(col.at, col.txt)
+            ysNums(out['xpln'], data1)
+            
+            if out['ztop'] == None:
+                out['ztop'] = {}
+                for col in data.cols.y:
+                    out['ztop'][col.txt] = Num(col.at, col.txt)
+            
+            tmp, _ = data.betters(len(best.rows))
+            top = data.clone(data.rows)
+            top = top.clone(tmp)
+            ysNums(out['ztop'], top)
+
+
+            print('-'*20)
     return 1

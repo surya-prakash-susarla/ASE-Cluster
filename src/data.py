@@ -8,6 +8,7 @@ from utils import rint, cosine, show, get_repgrid_file_contents, many, rand, ext
 from node import Node
 from range import Range
 from sym import Sym
+from functools import cmp_to_key
 
 import collections
 
@@ -31,7 +32,7 @@ class Data:
                 row = Row(row)
             elif not isinstance(row, Row):
                 raise Exception(
-                    "row being added is not of type list or row, contents: ", row)
+                    "Row being added is not of type list or row, contents: ", row)
             self.rows.append(row)
             self.cols.add(row)
         else:
@@ -67,6 +68,15 @@ class Data:
             s1 = s1 - (math.exp(col.wt*((x-y)/l)))
             s2 = s2 - (math.exp(col.wt*((y-x)/l)))
         return (s1/l) < (s2/l)
+
+    def betters(self, n=None):
+        rows = copy.deepcopy(self.rows)
+        cmp_key = cmp_to_key(self.better)
+        rows.sort(key=cmp_key)
+        if n == None:
+            return rows
+        else:
+            return rows[:n], rows[n+1:]
 
     def dist(self, row_1, row_2, cols=None):
         if cols == None:
