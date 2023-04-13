@@ -196,41 +196,19 @@ def showRule(rule):
 
 
 def firstN(sorted_list, scoring_function):
-    print("")
-
-    # def print_range(r):
-    #     for i in r:
-    #         print(i['range'].txt, i['range'].min,
-    #               i['range'].max, rnd(i['val']))
-
-    # print("Printing sorted ranges")
-
-    # print_range(sorted_list)
-    # print("Printing sorted ranges complete")
-
     first = sorted_list[0]['val']
 
-    # def useful(ranges):
-    #     if ranges['val'] > 0.05 and ranges['val'] > first/10:
-    #         return ranges
-
-    # sorted_ranges = []
-    # for ranges in sorted_list:
-    #     if (useful(ranges)):
-    #         sorted_ranges.append(ranges)
-
-    sorted_ranges = [x for x in sorted_list if x['val']
+    pruned_ranges = [x for x in sorted_list if x['val']
                      > .05 and x['val'] > first/10]
 
     out = []
     most = -1
     n = 1
     new_sorted_range = []
-    while n <= len(sorted_ranges):
-        new_sorted_range.append(sorted_ranges[n-1]['range'])
+    while n <= len(pruned_ranges):
+        new_sorted_range.append(pruned_ranges[n-1]['range'])
         tmp = scoring_function(new_sorted_range)
-        # print('tmp : ', tmp)
-        # print('most : ', most)
+        # NOTE: The condition below tmp[0] > most can be modified to tmp[0] >= most to include additional rules which have the same value as ones that were found previously. Sometimes, we see the same rule coming in multiple times in which case the current array can get duplicates and these are carries all the way till the end which can have unknown effects.
         if tmp and tmp[0] > most:
             most = tmp[0]
             out.append(tmp[1])
@@ -275,7 +253,6 @@ def xpln(data, best, rest):
     def score(ranges):
         r = rule(ranges, maxSizes)
         if r:
-            showRule(r)
             bestr = selects(r, best.rows)
             restr = selects(r, rest.rows)
             if len(bestr) + len(restr) > 0:
@@ -287,15 +264,14 @@ def xpln(data, best, rest):
 
     for ranges in bin_ranges:
         maxSizes[ranges[0].txt] = len(ranges)
-        print("")
         for r in ranges:
-            print(r.txt, " ", r.min, " ", r.max)
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
+
+    print("Final contents of max sizes : ", maxSizes)
 
     sorted_list = sorted(tmp, key=lambda d: d['val'], reverse=True)
     r, most = firstN(sorted_list, score)
 
-    print("\n")
     return r, most
 
 

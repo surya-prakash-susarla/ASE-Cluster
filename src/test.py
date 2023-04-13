@@ -188,7 +188,6 @@ def xpln_with_n_iterations(n):
         best, rest, evals = data.sway()
         # skipping print from original source of xpln20
         rule, most = xpln(data, best, rest)
-        print("printing rule: ")
-        print(rule)
+        print("rule : {}\nmost: {}".format(rule, most))
         print('-'*20)
     return 1
