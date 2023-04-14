@@ -229,8 +229,44 @@ def xpln_with_n_iterations(n):
             print('-'*20)
     
     # Further processing for printing and stuff.
-
-    # TODO: Implement the xpln 20 test function 
     print("TODO -> IMPLEMENT THE XPLN 20 TEST FUNCTION")
 
-    return 1
+    return out,rules
+def test_xpln20():
+    out,rules=xpln_with_n_iterations(20)
+    header=["all","sway","xpln","ztop"]
+
+    
+    for nums in out:
+        vars=sorted(list(out[nums].keys()))
+        break 
+    print(".",end='')
+    for col_name in vars:
+        print("&"+str(col_name),end=' ' )
+    print('\n')
+    for k in header:
+        nums=out[k]
+        
+        print("\n" + str(k), end= ' ')
+        for x in vars:
+            
+            num=nums[x]
+            print('&'+ str(rnd(num.mid(),2)), end='')
+    def fun(x):
+        if(x):
+            return '='
+        return '≠'
+    print('\n.')
+    print(".",end='')
+    for col_name in vars:
+        print("&"+str(col_name),end=' ' )
+
+    for h in header:
+        print("\nall to "+ str(h), end=' ')
+        for v in vars:
+            t1=out['all'][v].has
+            t2=out[h][v].has
+            #print("&" + str(fun(bootstrap(t1,t2) and cliffsDelta(t1,t2))), end='')
+            print("&" + str(fun(True and cliffsDelta(t1,t2))), end='')
+    if rules.n >0 :
+        print("\n rule size "+ "mu " +str(rules.mid()) + " std " +str(rnd(rules.div())) )
