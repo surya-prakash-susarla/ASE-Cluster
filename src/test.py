@@ -185,11 +185,13 @@ def xpln_with_n_iterations(n):
 
     out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None}
 
-    for i in range(20):
+    for i in range(2):
         print('*'*20)
         print("Iteration : ", i+1)
         data = Data(global_options[K_FILE])
         best, rest, evals = data.sway()
+        print('number of best : ', len(best.rows))
+        print('number of rest : ', len(rest.rows))
         # skipping print from original source of xpln20
         rule, most = xpln(data, best, rest)
         if len(rule) > 0:

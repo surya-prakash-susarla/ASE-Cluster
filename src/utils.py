@@ -115,6 +115,7 @@ def many(row, new_size):
 
 
 def value(has, nB=1, nR=1, sGoal=True):
+    # TODO : MAKE THIS A TRUE ENTROPY FUNCTION FOR SELECTING BETTER BINS.
     b = 0
     r = 0
     for x in has:
@@ -198,6 +199,7 @@ def showRule(rule):
 def firstN(sorted_list, scoring_function):
     first = sorted_list[0]['val']
 
+    # TODO: Change the pruning conditions based on the score function above.
     pruned_ranges = [x for x in sorted_list if x['val']
                      > .05 and x['val'] > first/10]
 
@@ -261,11 +263,17 @@ def xpln(data, best, rest):
     tmp, maxSizes = [], {}
 
     bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
+    print("x cols : ", len(data.cols.x))
+    print("length of bin ranges : ", len(bin_ranges))
+
 
     for ranges in bin_ranges:
         maxSizes[ranges[0].txt] = len(ranges)
         for r in ranges:
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
+
+    print("length of appended lists : ", len(tmp))
+    
 
     print("Final contents of max sizes : ", maxSizes)
 
