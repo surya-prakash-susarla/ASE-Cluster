@@ -207,9 +207,8 @@ class Data:
 
 
 def cliffsDelta(ns1, ns2):
-    count_limit = 512
+    count_limit = 256
     if (len(ns1) > count_limit):
-        print("picking randomly")
         ns1 = many(ns1, count_limit)
     if (len(ns2) > count_limit):
         ns2 = many(ns2, count_limit)
@@ -227,7 +226,7 @@ def cliffsDelta(ns1, ns2):
                 gt = gt+1
             elif y > x:
                 lt = lt+1
-    return ((abs(lt-gt))/n) > K_CLIFFS_DEFAULT_VALUE
+    return ((abs(lt-gt))/n) <= K_CLIFFS_DEFAULT_VALUE
 
 
 def diffs(nums1, nums2):
@@ -360,7 +359,7 @@ options = {
 
 def delta(i, other):
   e, y, z= 1E-32, i, other
-  return abs(y.mid() - z.mid()) / ((e + (y.div()**2)/(y.n+0.00000001) + (z.div()**2)/(z.n+0.000001)+0.0000000000001)**.5)
+  return abs(y.mid() - z.mid()) / ((e + (y.div()**2)/(y.n+e) + (z.div()**2)/(z.n+e))**.5)
 
 def samples(t,n = None):
   length = n if n != None else len(t)
