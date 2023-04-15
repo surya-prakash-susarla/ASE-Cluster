@@ -372,10 +372,6 @@ def samples(t, n=None):
 
 def bootstrap(y0, z0):
     x, y, z, yhat, zhat = Num(), Num(), Num(), [], []
-    print()
-    print('size of y0 : ', len(y0))
-    print('size of z0 : ', len(z0))
-    print()
     for y1 in y0:
         x.add(y1)
         y.add(y1)
@@ -388,7 +384,6 @@ def bootstrap(y0, z0):
     for z1 in z0:
         zhat.append(z1 - zmu + xmu)
     tobs = delta(y, z)
-    print("tobs value : ", tobs)
     n = 0
     for _ in range(0, options['bootstrap']):
         yhs = samples(yhat)
@@ -401,8 +396,5 @@ def bootstrap(y0, z0):
             zhs_nums.add(value)
         if delta(yhs_nums, zhs_nums) > tobs:
             n = n + 1
-    print("value of n : ", n)
     comp_value = n/options['bootstrap']
-    print("value : ", comp_value)
-    print("options : ", options['conf'])
     return comp_value >= options['conf']
