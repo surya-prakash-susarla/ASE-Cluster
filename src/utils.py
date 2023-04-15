@@ -116,6 +116,8 @@ def many(row, new_size):
 
 def value(has, nB=1, nR=1, sGoal=True):
     # TODO : MAKE THIS A TRUE ENTROPY FUNCTION FOR SELECTING BETTER BINS.
+    # UPDATE :  added the entropy function
+
     b = 0
     r = 0
     for x in has:
@@ -123,9 +125,13 @@ def value(has, nB=1, nR=1, sGoal=True):
             b += has[x]
         else:
             r += has[x]
-    b = b/(nB+0.0000000001)
-    r = r/(nR+0.0000000001)
-    return (b*b)/(b+r)
+    p_b = b/len(has)
+    p_r = r/len(has)
+    entropy =(-1)*((p_b*math.log(p_b)) + (p_r*math.log(p_r)))
+    #b = b/(nB+0.0000000001)
+    #r = r/(nR+0.0000000001)
+    #return (b*b)/(b+r)
+    return entropy
 
 
 def prune(rule, maxSize):
@@ -197,11 +203,15 @@ def showRule(rule):
 
 
 def firstN(sorted_list, scoring_function):
-    first = sorted_list[0]['val']
+    #first = sorted_list[0]['val']
 
     # TODO: Change the pruning conditions based on the score function above.
-    pruned_ranges = [x for x in sorted_list if x['val']
-                     > .05 and x['val'] > first/10]
+    #pruned_ranges = [x for x in sorted_list if x['val']
+    #                 > .05 and x['val'] > first/10]
+
+    # UPDATE : Changed the pruning conditions based on the score function
+
+    pruned_ranges = [x for x in sorted_list if x['val'] < 0.65]
 
     out = []
     most = -1
