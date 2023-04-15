@@ -1,7 +1,7 @@
 from sym import Sym
 from num import Num
 from utils import rand, rint, rnd, show, show_tree, tree, value, xpln, showRule, selects, ysNums
-from data import Data, rep_cols, rep_rows, rep_grid, rep_place, transpose, cliffsDelta
+from data import Data, rep_cols, rep_rows, rep_grid, rep_place, transpose, cliffsDelta,bootstrap
 from csv import get_csv_rows
 from collections import OrderedDict
 from globals import *
@@ -236,10 +236,15 @@ def test_xpln20():
     out,rules=xpln_with_n_iterations(20)
     header=["all","sway","xpln","ztop"]
 
+    print("output of out : ", out)
     
-    for nums in out:
-        vars=sorted(list(out[nums].keys()))
-        break 
+    # for nums in out:
+    #     vars=sorted(list(out[nums].keys()))
+    #     break 
+
+    vars = sorted(list(out["all"].keys()))
+    print("value of vars : ", vars)
+
     print(".",end='')
     for col_name in vars:
         print("&"+str(col_name),end=' ' )
@@ -252,10 +257,14 @@ def test_xpln20():
             
             num=nums[x]
             print('&'+ str(rnd(num.mid(),2)), end='')
+
+    print("first table should be done now")
+
     def fun(x):
         if(x):
             return '='
         return '≠'
+
     print('\n.')
     print(".",end='')
     for col_name in vars:
@@ -266,7 +275,19 @@ def test_xpln20():
         for v in vars:
             t1=out['all'][v].has
             t2=out[h][v].has
-            #print("&" + str(fun(bootstrap(t1,t2) and cliffsDelta(t1,t2))), end='')
-            print("&" + str(fun(True and cliffsDelta(t1,t2))), end='')
+
+            b_return = bootstrap(t1, t2)
+            c_return = cliffsDelta(t1, t2)
+
+            if h == 'all':
+                # print("t1 : ", t1)
+                # print("t2 : ", t2)
+
+                print()
+                print("boostrap : ", b_return)
+                print("cliffs : ", c_return)
+
+            print("&" + str(fun(b_return and c_return)), end='')
+            
     if rules.n >0 :
         print("\n rule size "+ "mu " +str(rules.mid()) + " std " +str(rnd(rules.div())) )

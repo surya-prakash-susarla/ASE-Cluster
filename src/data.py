@@ -9,7 +9,8 @@ from node import Node
 from range import Range
 from sym import Sym
 from functools import cmp_to_key
-
+from num import Num
+import random
 import collections
 
 
@@ -206,12 +207,14 @@ class Data:
 
 
 def cliffsDelta(ns1, ns2):
-    if (len(ns1) > 256):
-        ns1 = many(ns1, 256)
-    if (len(ns2) > 256):
-        ns2 = many(ns2, 256)
+    count_limit = 512
+    if (len(ns1) > count_limit):
+        print("picking randomly")
+        ns1 = many(ns1, count_limit)
+    if (len(ns2) > count_limit):
+        ns2 = many(ns2, count_limit)
     if (len(ns1) > 10*len(ns2)):
-        ns1 = many(ns1, 10*ns1)
+        ns1 = many(ns1, 10*len(ns2))
     if (len(ns2) > 10*len(ns1)):
         ns2 = many(ns2, 10*len(ns1))
     n = 0
@@ -345,3 +348,46 @@ def person_3():
                 [1, 4, 3, 2, 5, 4, 4, 'Twilight'],
                 [4, 5, 2, 5, 5, 1, 4, 'Bad boys']]
     return Data(source_file=None, source_rows=person_3)
+
+
+options = {
+    'bootstrap': 512,
+    'conf': 0.05,
+    'cliff': 0.4,
+    'cohen': 0.35,
+    'width': 40,
+}
+
+def delta(i, other):
+  e, y, z= 1E-32, i, other
+  return abs(y.mid() - z.mid()) / ((e + (y.div()**2)/(y.n+0.00000001) + (z.div()**2)/(z.n+0.000001)+0.0000000000001)**.5)
+
+def samples(t,n = None):
+  length = n if n != None else len(t)
+  u = [0 for i in range(0, length)]
+  for i in range(0, n if n != None else len(t)):
+      u[i] = t[random.randrange(len(t))]
+  return u
+
+def bootstrap(y0,z0):
+  x, y, z, yhat, zhat = Num(), Num(), Num(), [], []
+  for y1 in y0:
+      x.add(y1)
+      y.add(y1)
+  for z1 in z0:
+      x.add(z1)
+      z.add(z1)
+  xmu, ymu, zmu = x.mid(), y.mid(), z.mid()
+  for y1 in y0:
+      yhat.append(y1 - ymu + xmu)
+  for z1 in z0:
+      zhat.append(z1 - zmu + xmu)
+  tobs = delta(y,z)
+  n = 0
+  for _ in range(0, options['bootstrap']):
+      if delta(Num(samples(yhat)), Num(samples(zhat))) > tobs:
+          n = n + 1
+  return n / options['bootstrap'] >= options['conf']
+
+
+
