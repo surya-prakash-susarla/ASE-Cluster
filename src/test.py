@@ -185,7 +185,7 @@ def xpln_with_n_iterations(n):
 
     out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None}
 
-    for i in range(2):
+    for i in range(n):
         print('*'*20)
         print("Iteration : ", i+1)
         data = Data(global_options[K_FILE])
