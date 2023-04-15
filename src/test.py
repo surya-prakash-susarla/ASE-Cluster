@@ -279,13 +279,13 @@ def test_xpln20():
             b_return = bootstrap(t1, t2)
             c_return = cliffsDelta(t1, t2)
 
-            if h == 'all':
-                # print("t1 : ", t1)
-                # print("t2 : ", t2)
+            # if h == 'all':
+            #     # print("t1 : ", t1)
+            #     # print("t2 : ", t2)
 
-                print()
-                print("boostrap : ", b_return)
-                print("cliffs : ", c_return)
+            #     # print()
+            #     # print("boostrap : ", b_return)
+            #     # print("cliffs : ", c_return)
 
             print("&" + str(fun(b_return and c_return)), end='')
             
