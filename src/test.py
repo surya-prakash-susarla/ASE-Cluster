@@ -229,21 +229,14 @@ def xpln_with_n_iterations(n):
 
 
             print('-'*20)
-    
-    # Further processing for printing and stuff.
-    print("TODO -> IMPLEMENT THE XPLN 20 TEST FUNCTION")
-
     return out,rules
+
 def test_xpln20():
     out,rules=xpln_with_n_iterations(20)
     header=["all","sway","xpln","ztop"]
 
     print("output of out : ", out)
     
-    # for nums in out:
-    #     vars=sorted(list(out[nums].keys()))
-    #     break 
-
     vars = sorted(list(out["all"].keys()))
     print("value of vars : ", vars)
 
@@ -260,6 +253,7 @@ def test_xpln20():
             num=nums[x]
             print('&'+ str(rnd(num.mid(),2)), end='')
 
+    print("")
     print("first table should be done now")
 
     def fun(x):

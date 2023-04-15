@@ -357,36 +357,52 @@ options = {
     'width': 40,
 }
 
+
 def delta(i, other):
-  e, y, z= 1E-32, i, other
-  return abs(y.mid() - z.mid()) / ((e + (y.div()**2)/(y.n+e) + (z.div()**2)/(z.n+e))**.5)
+    e, y, z = 1E-32, i, other
+    return abs(y.mid() - z.mid()) / ((e + (y.div()**2)/(y.n+0.00000001) + (z.div()**2)/(z.n+0.000001)+0.0000000000001)**.5)
 
-def samples(t,n = None):
-  length = n if n != None else len(t)
-  u = [0 for i in range(0, length)]
-  for i in range(0, n if n != None else len(t)):
-      u[i] = t[random.randrange(len(t))]
-  return u
-
-def bootstrap(y0,z0):
-  x, y, z, yhat, zhat = Num(), Num(), Num(), [], []
-  for y1 in y0:
-      x.add(y1)
-      y.add(y1)
-  for z1 in z0:
-      x.add(z1)
-      z.add(z1)
-  xmu, ymu, zmu = x.mid(), y.mid(), z.mid()
-  for y1 in y0:
-      yhat.append(y1 - ymu + xmu)
-  for z1 in z0:
-      zhat.append(z1 - zmu + xmu)
-  tobs = delta(y,z)
-  n = 0
-  for _ in range(0, options['bootstrap']):
-      if delta(Num(samples(yhat)), Num(samples(zhat))) > tobs:
-          n = n + 1
-  return n / options['bootstrap'] >= options['conf']
+def samples(t, n=None):
+    length = n if n != None else len(t)
+    u = [0 for i in range(0, length)]
+    for i in range(0, length):
+        u[i] = t[random.randrange(len(t))]
+    return u
 
 
-
+def bootstrap(y0, z0):
+    x, y, z, yhat, zhat = Num(), Num(), Num(), [], []
+    print()
+    print('size of y0 : ', len(y0))
+    print('size of z0 : ', len(z0))
+    print()
+    for y1 in y0:
+        x.add(y1)
+        y.add(y1)
+    for z1 in z0:
+        x.add(z1)
+        z.add(z1)
+    xmu, ymu, zmu = x.mid(), y.mid(), z.mid()
+    for y1 in y0:
+        yhat.append(y1 - ymu + xmu)
+    for z1 in z0:
+        zhat.append(z1 - zmu + xmu)
+    tobs = delta(y, z)
+    print("tobs value : ", tobs)
+    n = 0
+    for _ in range(0, options['bootstrap']):
+        yhs = samples(yhat)
+        zhs = samples(zhat)
+        yhs_nums = Num()
+        for value in yhs:
+            yhs_nums.add(value)
+        zhs_nums = Num()
+        for value in zhs:
+            zhs_nums.add(value)
+        if delta(yhs_nums, zhs_nums) > tobs:
+            n = n + 1
+    print("value of n : ", n)
+    comp_value = n/options['bootstrap']
+    print("value : ", comp_value)
+    print("options : ", options['conf'])
+    return comp_value >= options['conf']
