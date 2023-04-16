@@ -115,9 +115,6 @@ def many(row, new_size):
 
 
 def value(has, nB=1, nR=1, sGoal=True):
-    # TODO : MAKE THIS A TRUE ENTROPY FUNCTION FOR SELECTING BETTER BINS.
-    # UPDATE :  added the entropy function
-
     b = 0
     r = 0
     for x in has:
@@ -127,10 +124,9 @@ def value(has, nB=1, nR=1, sGoal=True):
             r += has[x]
     p_b = b/len(has)
     p_r = r/len(has)
-    entropy =(-1)*((p_b*math.log(p_b)) + (p_r*math.log(p_r)))
-    #b = b/(nB+0.0000000001)
-    #r = r/(nR+0.0000000001)
-    #return (b*b)/(b+r)
+    log_p_b = math.log(p_b) if p_b > 0 else 0
+    log_p_r = math.log(p_r) if p_r > 0 else 0
+    entropy =(-1)*((p_b*log_p_b) + (p_r*log_p_r))
     return entropy
 
 
@@ -157,21 +153,14 @@ def rule(ranges, maxSize):
 
 
 def showRule(rule):
-    # print("inside show rule", rule)
     def pretty(rang):
         return rang['min'] if rang['max'] == rang['min'] else {'max': rang['max'], 'min': rang['min']}
 
     def merge(t0):
-        # print('t0 : ', t0)
-
-        # print("len of t0 : ", len(t0))
         t, j, left, right = [], 0, None, None
 
         while j+1 < len(t0):
             left, right = list(t0.values())[j], list(t0.values())[j+1]
-            # print('t0 :', t0)
-            # print('left : ', left)
-            # print('right : ', right)
             if right and left['max'] == right['min']:
                 left['max'] = right['max']
                 j = j+1
@@ -190,7 +179,6 @@ def showRule(rule):
             for x in ranges:
                 temp[x[0]] = x[1]
             ranges = temp
-        # print('ranges  : ', ranges)
         temp = []
         for i in merge(ranges):
             temp.append(pretty(i))
@@ -203,14 +191,6 @@ def showRule(rule):
 
 
 def firstN(sorted_list, scoring_function):
-    #first = sorted_list[0]['val']
-
-    # TODO: Change the pruning conditions based on the score function above.
-    #pruned_ranges = [x for x in sorted_list if x['val']
-    #                 > .05 and x['val'] > first/10]
-
-    # UPDATE : Changed the pruning conditions based on the score function
-
     pruned_ranges = [x for x in sorted_list if x['val'] < 0.65]
 
     out = []
@@ -230,9 +210,7 @@ def firstN(sorted_list, scoring_function):
 
 def selects(rule, rows):
     def disjunction(ranges, row):
-        # print('ranges : ', ranges)
         for range in ranges:
-            # print("range : ", range)
             lo, hi, at = range['min'], range['max'], range['at']
             x = rows.index(row)
             if x == '?':
@@ -244,10 +222,7 @@ def selects(rule, rows):
         return False
 
     def conjunction(row):
-        # print('in conjuction')
-        # print('rule : ', rule)
         for ranges in rule.values():
-            # print('conjunction range : ', ranges)
             if not disjunction([ranges], row):
                 return False
         return True
@@ -273,19 +248,11 @@ def xpln(data, best, rest):
     tmp, maxSizes = [], {}
 
     bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
-    print("x cols : ", len(data.cols.x))
-    print("length of bin ranges : ", len(bin_ranges))
-
 
     for ranges in bin_ranges:
         maxSizes[ranges[0].txt] = len(ranges)
         for r in ranges:
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
-
-    print("length of appended lists : ", len(tmp))
-    
-
-    print("Final contents of max sizes : ", maxSizes)
 
     sorted_list = sorted(tmp, key=lambda d: d['val'], reverse=True)
     r, most = firstN(sorted_list, score)
