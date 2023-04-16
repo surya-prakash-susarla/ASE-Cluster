@@ -1,16 +1,20 @@
 import sys
 import math
 import collections
+import pathlib
 
 from test import *
 from cli import initialize_from_cli, print_help
-from globals import global_options, K_HELP, K_START_ACTION
+from globals import global_options, K_HELP, K_START_ACTION, K_FILE
 
 def generate_results() -> int:
-    n = 20
-    #return_value = xpln_with_n_iterations(n)
-    #print(return_value)
-    test_xpln20()
+    # Iterate through files in the data path.
+    files = pathlib.Path('../etc/data/').iterdir()
+
+    for f in files:
+        print("Currently processing file : ", f)
+        global_options[K_FILE] = f
+        test_xpln20()
 
     return 0
 

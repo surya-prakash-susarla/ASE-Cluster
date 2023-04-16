@@ -6,16 +6,17 @@ def coerce(s):
     return s
 
 def get_csv_rows(filepath: str) -> []:
-        filepath = (Path(__file__) / filepath).resolve()
+    filepath = Path(filepath)
+    does_file_exist = filepath.exists()
+    is_csv_suffix = (filepath.suffix == '.csv') 
+    if not does_file_exist or not is_csv_suffix:
+        print("File path does not exist OR File not csv, given path: ", filepath.absolute())
+        return
 
-        if not filepath.exists() or filepath.suffix != '.csv':
-            print("File path does not exist OR File not csv, given path: ", filepath.absolute())
-            return
+    rows = []
+    with open(filepath.absolute(), 'r', encoding='utf-8') as file:
+        for row_no, line in enumerate(file):
+            row = list(map(coerce, line.strip().split(',')))
+            rows.append(row)
 
-        rows = []
-        with open(filepath.absolute(), 'r', encoding='utf-8') as file:
-            for row_no, line in enumerate(file):
-                row = list(map(coerce, line.strip().split(',')))
-                rows.append(row)
-
-        return rows
+    return rows

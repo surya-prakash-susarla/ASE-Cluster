@@ -36,7 +36,8 @@ K_SEED = 'seed'
 K_DEFAULT_SEED_VALUE = 937162211
 
 K_FILE = 'file'
-K_DEFAULT_DATA_FILE = "../../etc/data/auto93.csv"
+# K_DEFAULT_DATA_FILE = "../../etc/data/auto93.csv"
+K_DEFAULT_DATA_FILE = "../../etc/data/pom.csv"
 
 K_D = 'd'
 K_D_DEFAULT_VALUE = .35
