@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 
 def coerce(s):
-    s = float(s) if bool(re.search(r'\d', s)) else s
+    s = s if bool(re.search(r'[a-zA-Z]', s)) else float(s)
     return s
 
 def get_csv_rows(filepath: str) -> []:
