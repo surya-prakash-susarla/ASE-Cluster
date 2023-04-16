@@ -248,7 +248,7 @@ def xpln(data, best, rest):
     tmp, maxSizes = [], {}
 
     bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
-
+    
     for ranges in bin_ranges:
         maxSizes[ranges[0].txt] = len(ranges)
         for r in ranges:

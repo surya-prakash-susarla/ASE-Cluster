@@ -168,28 +168,24 @@ class Data:
     def bins(self, cols, rowss):
         def with1col(col):
             n, ranges = withAllRows(col)
-            ranges = sorted(ranges, key=lambda d: d.min)
+            ranges = sorted(ranges.items(), key=lambda d: d[1].min)
+
+            ranges = [x[1] for x in ranges]
             if isinstance(col, Sym):
                 return ranges
             else:
-                # print("global options : ")
-                # print(global_options)
                 return merges(ranges, n/global_options[K_BINS], global_options[K_D]*col.div())
 
         def withAllRows(col):
-            n, ranges = 0, []
+            n, ranges = 0, dict()
 
             def xy(x, y, n):
-                # print(y)
                 if x:
                     n = n+1
                     k = self.bin(col, x)
-                    k = (int)(k)
-                    if k < len(ranges):
-                        ranges[k] = ranges[k]
-                    else:
-                        ranges.append(Range(col.at, col.txt, x))
-                    extend(ranges[k] if k < len(ranges) else ranges[-1], x, y)
+                    if k not in ranges:
+                        ranges[k] = Range(col.at, col.txt, x)
+                    extend(ranges[k], x, y)
                     return n
             for key in rowss.keys():
                 for row in rowss[key]:
