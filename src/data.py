@@ -187,7 +187,7 @@ class Data:
                     if k not in ranges:
                         ranges[k] = Range(col.at, col.txt, x)
                     extend(ranges[k], x, y)
-                    return n
+                return n
             for key in rowss.keys():
                 for row in rowss[key]:
                     n = xy(row.cells[col.at], key, n)
