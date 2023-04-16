@@ -234,11 +234,8 @@ def xpln_with_n_iterations(n):
 def test_xpln20():
     out,rules=xpln_with_n_iterations(20)
     header=["all","sway","xpln","ztop"]
-
-    print("output of out : ", out)
     
     vars = sorted(list(out["all"].keys()))
-    print("value of vars : ", vars)
 
     print(".",end='')
     for col_name in vars:
@@ -252,9 +249,6 @@ def test_xpln20():
             
             num=nums[x]
             print('&'+ str(rnd(num.mid(),2)), end='')
-
-    print("")
-    print("first table should be done now")
 
     def fun(x):
         if(x):
@@ -274,14 +268,6 @@ def test_xpln20():
 
             b_return = bootstrap(t1, t2)
             c_return = cliffsDelta(t1, t2)
-
-            # if h == 'all':
-            #     # print("t1 : ", t1)
-            #     # print("t2 : ", t2)
-
-            #     # print()
-            #     # print("boostrap : ", b_return)
-            #     # print("cliffs : ", c_return)
 
             print("&" + str(fun(b_return and c_return)), end='')
             
