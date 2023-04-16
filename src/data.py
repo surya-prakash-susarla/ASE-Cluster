@@ -104,7 +104,8 @@ class Data:
             return self.dist(r1, r2, cols)
 
         def cos(a, b, c):
-            return (a*a + c*c - b*b) / (2*c)
+            # TODO: should c == 0 even be possible ?  (in sym cols)
+            return (a*a + c*c - b*b) / (2*c) if c != 0 else 0
 
         def proj(r):
             return {'row': r, 'x': cos(gap(r, A), gap(r, B), c)}

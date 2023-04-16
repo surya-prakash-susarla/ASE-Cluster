@@ -212,7 +212,7 @@ def selects(rule, rows):
     def disjunction(ranges, row):
         for range in ranges:
             lo, hi, at = range['min'], range['max'], range['at']
-            x = rows.index(row)
+            x = row.cells[at]
             if x == '?':
                 return True
             if lo == hi and lo == x:

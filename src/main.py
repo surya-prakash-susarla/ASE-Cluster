@@ -12,9 +12,11 @@ def generate_results() -> int:
     files = pathlib.Path('../etc/data/').iterdir()
 
     for f in files:
+        print('\n'*2 + '<'*10 + '='*15 + '>'*10)
         print("Currently processing file : ", f)
         global_options[K_FILE] = f
         test_xpln20()
+        print('<'*10 + '='*15 + '>'*10 + '\n'*2)
 
     return 0
 
