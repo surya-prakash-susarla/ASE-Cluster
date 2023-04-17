@@ -169,7 +169,7 @@ class Data:
     def bins(self, cols, rowss):
         def with1col(col):
             n, ranges = withAllRows(col)
-            ranges = sorted(ranges.items(), key=lambda d: d[1].min)
+            ranges = sorted(ranges.items(), key=lambda d: float(d[1].min))
 
             ranges = [x[1] for x in ranges]
             if isinstance(col, Sym):
@@ -200,6 +200,7 @@ class Data:
         if col.max == col.min:
             return 1
         temp = (col.max - col.min)/(K_BINS_DEFAULT_VALUE-1)
+        x = float(x)
         return math.floor(x/temp + 0.5)*temp
 
 
