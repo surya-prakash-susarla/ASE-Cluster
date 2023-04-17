@@ -104,7 +104,8 @@ class Data:
             return self.dist(r1, r2, cols)
 
         def cos(a, b, c):
-            return (a*a + c*c - b*b) / (2*c)
+            # TODO: should c == 0 even be possible ?  (in sym cols)
+            return (a*a + c*c - b*b) / (2*c) if c != 0 else 0
 
         def proj(r):
             return {'row': r, 'x': cos(gap(r, A), gap(r, B), c)}
@@ -168,29 +169,30 @@ class Data:
     def bins(self, cols, rowss):
         def with1col(col):
             n, ranges = withAllRows(col)
-            ranges = sorted(ranges, key=lambda d: d.min)
+            def range_element_comparison(x):
+                try:
+                    return float(x)
+                except:
+                    return x
+            ranges = sorted(ranges.items(), key=range_element_comparison)
+
+            ranges = [x[1] for x in ranges]
             if isinstance(col, Sym):
                 return ranges
             else:
-                # print("global options : ")
-                # print(global_options)
                 return merges(ranges, n/global_options[K_BINS], global_options[K_D]*col.div())
 
         def withAllRows(col):
-            n, ranges = 0, []
+            n, ranges = 0, dict()
 
             def xy(x, y, n):
-                # print(y)
                 if x:
                     n = n+1
                     k = self.bin(col, x)
-                    k = (int)(k)
-                    if k < len(ranges):
-                        ranges[k] = ranges[k]
-                    else:
-                        ranges.append(Range(col.at, col.txt, x))
-                    extend(ranges[k] if k < len(ranges) else ranges[-1], x, y)
-                    return n
+                    if k not in ranges:
+                        ranges[k] = Range(col.at, col.txt, x)
+                    extend(ranges[k], x, y)
+                return n
             for key in rowss.keys():
                 for row in rowss[key]:
                     n = xy(row.cells[col.at], key, n)
@@ -203,6 +205,7 @@ class Data:
         if col.max == col.min:
             return 1
         temp = (col.max - col.min)/(K_BINS_DEFAULT_VALUE-1)
+        x = float(x)
         return math.floor(x/temp + 0.5)*temp
 
 
