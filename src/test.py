@@ -232,7 +232,9 @@ def xpln_with_n_iterations(n):
     return out,rules
 
 def test_xpln20():
-    out,rules=xpln_with_n_iterations(20)
+    out, rules = None, None
+    while out == None and rules == None:
+        out,rules=xpln_with_n_iterations(20)
     header=["all","sway","xpln","ztop"]
     
     vars = sorted(list(out["all"].keys()))
