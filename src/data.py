@@ -169,7 +169,12 @@ class Data:
     def bins(self, cols, rowss):
         def with1col(col):
             n, ranges = withAllRows(col)
-            ranges = sorted(ranges.items(), key=lambda d: float(d[1].min))
+            def range_element_comparison(x):
+                try:
+                    return float(x)
+                except:
+                    return x
+            ranges = sorted(ranges.items(), key=range_element_comparison)
 
             ranges = [x[1] for x in ranges]
             if isinstance(col, Sym):
