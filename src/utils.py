@@ -248,8 +248,10 @@ def xpln(data, best, rest):
     tmp, maxSizes = [], {}
 
     bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
-    
     for ranges in bin_ranges:
+        if ranges == None:
+            print("None type ranges found")
+            continue
         maxSizes[ranges[0].txt] = len(ranges)
         for r in ranges:
             tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
