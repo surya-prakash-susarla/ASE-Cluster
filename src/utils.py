@@ -122,8 +122,8 @@ def value(has, nB=1, nR=1, sGoal=True):
             b += has[x]
         else:
             r += has[x]
-    p_b = b/len(has)
-    p_r = r/len(has)
+    p_b = b/(b+r)
+    p_r = r/(b+r)
     log_p_b = math.log(p_b) if p_b > 0 else 0
     log_p_r = math.log(p_r) if p_r > 0 else 0
     entropy =(-1)*((p_b*log_p_b) + (p_r*log_p_r))
@@ -191,7 +191,7 @@ def showRule(rule):
 
 
 def firstN(sorted_list, scoring_function):
-    pruned_ranges = [x for x in sorted_list if x['val'] < 0.65]
+    pruned_ranges = [x for x in sorted_list if x['val'] > .05]
 
     out = []
     most = -1

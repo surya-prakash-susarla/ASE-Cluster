@@ -233,7 +233,7 @@ def xpln_with_n_iterations(n):
 
 def test_xpln20():
     out, rules = None, None
-    while out == None and rules == None:
+    while out == None:
         out,rules=xpln_with_n_iterations(20)
     header=["all","sway","xpln","ztop"]
     
