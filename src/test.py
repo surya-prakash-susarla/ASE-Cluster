@@ -248,18 +248,17 @@ def xpln_with_n_iterations(n):
     return out, rules
 
 
-def test_xpln20():
+def test_xpln(n=20):
     out, rules = None, None
     while out == None:
-        out, rules = xpln_with_n_iterations(20)
+        out, rules = xpln_with_n_iterations(n)
     header = ["all", "sway", "sway_1", "xpln", "xpln_1", "ztop"]
 
     vars = sorted(list(out["all"].keys()))
 
-    print(".", end='')
+    # print(".", end='')
     for col_name in vars:
         print("&"+str(col_name), end=' ')
-    print('\n')
     for k in header:
         nums = out[k]
 
@@ -267,7 +266,7 @@ def test_xpln20():
         for x in vars:
 
             num = nums[x]
-            print('&' + str(rnd(num.mid(), 2)), end='')
+            print(' & ' + str(rnd(num.mid(), 2)), end='')
 
     def fun(x):
         if (x):
@@ -275,7 +274,7 @@ def test_xpln20():
         return '≠'
 
     print('\n.')
-    print(".", end='')
+    # print(".", end='')
     for col_name in vars:
         print("&"+str(col_name), end=' ')
 

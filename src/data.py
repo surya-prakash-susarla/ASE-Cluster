@@ -13,6 +13,14 @@ from num import Num
 import random
 import collections
 
+# trials for quick testing
+from sklearn.cluster import AgglomerativeClustering
+import kmodes
+from kmodes.kprototypes import KPrototypes
+import numpy as np
+import itertools
+# trials for quick testing
+
 
 class Data:
     def __init__(self, source_file=K_DEFAULT_DATA_FILE, source_rows=None):
@@ -160,11 +168,58 @@ class Data:
             rows = copy.deepcopy(self.rows)
         best, rest, evals = self.worker(rows, [], evals0=0)
         return self.clone(best), self.clone(rest), evals
-    
+
+    def generate_best_rest_clusters(self, rows):
+        cells = [x.cells for x in rows]
+        cells = np.array(cells)
+        y_cols = [x.at for x in self.cols.y]
+        print("y cols : ", y_cols)
+        print("shape of cells : ", cells.shape)
+
+        # remove all y values from the cells
+        cells = np.delete(cells, y_cols, axis=1)
+        print("shape of cells after removing y cols : ", cells.shape)
+
+        print([type(x) for x in self.cols.x])
+        categorical_cols = [x.at for x in self.cols.x if isinstance(x, Sym)]
+        print("categorical cols identified : ", categorical_cols)
+        labels = KPrototypes(n_clusters=4).fit_predict(
+            cells, categorical=categorical_cols)
+
+        # classification into best & rest after clustering.
+        clusters = dict()
+        for i in range(len(labels)):
+            if labels[i] not in clusters:
+                clusters[labels[i]] = []
+            clusters[labels[i]].append(rows[i])
+
+        print("initial clusters : ", clusters)
+
+        # TODO: identify best and rest based on cluster center and lookups.
+        def compare_clusters(cluster_1, cluster_2):
+            cluster_1 = cluster_1[1]
+            cluster_2 = cluster_2[1]
+            return self.better(cluster_1[len(cluster_1)//2], cluster_2[len(cluster_2)//2])
+        sorted(clusters.items(), key=cmp_to_key(compare_clusters))
+
+        print("sorted clusters : ", clusters)
+
+        clusters = list(clusters.values())
+
+        best_cluster = clusters[0]
+        rest_clusters = clusters[1:]
+        rest_clusters = list(itertools.chain.from_iterable(rest_clusters))
+
+        print("final chosen number of best rows : ", len(best_cluster))
+        print("final chosen number of rest rows : ", len(rest_clusters))
+
+        return best_cluster, rest_clusters
+
     def sway_improved(self, rows=None):
         if rows == None:
             rows = copy.deepcopy(self.rows)
         best, rest = rows[:len(rows)//2], rows[len(rows)//2:]
+        best, rest = self.generate_best_rest_clusters(rows)
         return self.clone(best), self.clone(rest), 0
 
     def furthest(self, row_1, rows=None):
@@ -175,6 +230,7 @@ class Data:
     def bins(self, cols, rowss):
         def with1col(col):
             n, ranges = withAllRows(col)
+
             def range_element_comparison(x):
                 try:
                     return float(x)
@@ -370,6 +426,7 @@ options = {
 def delta(i, other):
     e, y, z = 1E-32, i, other
     return abs(y.mid() - z.mid()) / ((e + (y.div()**2)/(y.n+0.00000001) + (z.div()**2)/(z.n+0.000001)+0.0000000000001)**.5)
+
 
 def samples(t, n=None):
     length = n if n != None else len(t)
