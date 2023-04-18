@@ -168,52 +168,44 @@ class Data:
             rows = copy.deepcopy(self.rows)
         best, rest, evals = self.worker(rows, [], evals0=0)
         return self.clone(best), self.clone(rest), evals
+    
+    def recursive_k_mode_cluster(self, rows, worse_rows, categorical_cols, y_cols):
+        cells = np.array([x.cells for x in rows])
+
+        cells = np.delete(cells, y_cols, axis=1)
+
+        labels = KPrototypes(n_clusters=2).fit_predict(cells, categorical=categorical_cols)
+
+        best = []
+        rest = []
+        for i in range(len(rows)):
+            if labels[i] == 0:
+                best.append(rows[i])
+            else:
+                rest.append(rows[i])
+        
+        best_mid = best[len(best)//2]
+        rest_mid = rest[len(rest)//2]
+
+        if not self.better(best_mid, rest_mid):
+            best, rest = rest, best
+
+        # Only happens at the top-level division. 
+        if worse_rows == None:
+            worse_rows = rest
+
+        if len(best) <= (len(self.rows)**global_options[K_MIN]):
+            return rows, many(worse_rows, global_options[K_REST]*len(rows))
+
+        return self.recursive_k_mode_cluster(best, worse_rows, categorical_cols, y_cols)
 
     def generate_best_rest_clusters(self, rows):
-        cells = [x.cells for x in rows]
-        cells = np.array(cells)
         y_cols = [x.at for x in self.cols.y]
-        print("y cols : ", y_cols)
-        print("shape of cells : ", cells.shape)
-
-        # remove all y values from the cells
-        cells = np.delete(cells, y_cols, axis=1)
-        print("shape of cells after removing y cols : ", cells.shape)
-
-        print([type(x) for x in self.cols.x])
         categorical_cols = [x.at for x in self.cols.x if isinstance(x, Sym)]
-        print("categorical cols identified : ", categorical_cols)
-        labels = KPrototypes(n_clusters=4).fit_predict(
-            cells, categorical=categorical_cols)
 
-        # classification into best & rest after clustering.
-        clusters = dict()
-        for i in range(len(labels)):
-            if labels[i] not in clusters:
-                clusters[labels[i]] = []
-            clusters[labels[i]].append(rows[i])
+        best, rest = self.recursive_k_mode_cluster(rows, None, categorical_cols, y_cols)
 
-        print("initial clusters : ", clusters)
-
-        # TODO: identify best and rest based on cluster center and lookups.
-        def compare_clusters(cluster_1, cluster_2):
-            cluster_1 = cluster_1[1]
-            cluster_2 = cluster_2[1]
-            return self.better(cluster_1[len(cluster_1)//2], cluster_2[len(cluster_2)//2])
-        sorted(clusters.items(), key=cmp_to_key(compare_clusters))
-
-        print("sorted clusters : ", clusters)
-
-        clusters = list(clusters.values())
-
-        best_cluster = clusters[0]
-        rest_clusters = clusters[1:]
-        rest_clusters = list(itertools.chain.from_iterable(rest_clusters))
-
-        print("final chosen number of best rows : ", len(best_cluster))
-        print("final chosen number of rest rows : ", len(rest_clusters))
-
-        return best_cluster, rest_clusters
+        return best, rest
 
     def sway_improved(self, rows=None):
         if rows == None:

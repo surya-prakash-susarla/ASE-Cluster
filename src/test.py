@@ -192,6 +192,7 @@ def xpln_with_n_iterations(n):
         data = Data(global_options[K_FILE])
         best, rest, evals = data.sway()
         best1, rest1, evals = data.sway_improved()
+        print('total number of rows : ', len(data.rows))
         print('number of best : ', len(best.rows))
         print('number of rest : ', len(rest.rows))
         print('number of best improved : ', len(best1.rows))
@@ -256,7 +257,6 @@ def test_xpln(n=20):
 
     vars = sorted(list(out["all"].keys()))
 
-    # print(".", end='')
     for col_name in vars:
         print("&"+str(col_name), end=' ')
     for k in header:
@@ -274,7 +274,6 @@ def test_xpln(n=20):
         return '≠'
 
     print('\n.')
-    # print(".", end='')
     for col_name in vars:
         print("&"+str(col_name), end=' ')
 
