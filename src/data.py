@@ -160,6 +160,13 @@ class Data:
             rows = copy.deepcopy(self.rows)
         best, rest, evals = self.worker(rows, [], evals0=0)
         return self.clone(best), self.clone(rest), evals
+    
+    def sway_improved(self, rows=None):
+        if rows == None:
+            rows = copy.deepcopy(self.rows)
+        print("type of rows : ", type(rows))
+        best, rest = rows[:len(rows)//2], rows[len(rows)//2:]
+        return self.clone(best), self.clone(rest), 0
 
     def furthest(self, row_1, rows=None):
         if rows == None:

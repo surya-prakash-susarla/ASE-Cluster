@@ -183,17 +183,36 @@ def test_half():
 def xpln_with_n_iterations(n):
     rules = Num()
 
-    out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None}
+    out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None, 'sway_1': None}
 
     for i in range(n):
         print('*'*20)
         print("Iteration : ", i+1)
         data = Data(global_options[K_FILE])
         best, rest, evals = data.sway()
+        best1, rest1, evals = data.sway_improved()
         print('number of best : ', len(best.rows))
         print('number of rest : ', len(rest.rows))
+        print('number of best improved : ', len(best1.rows))
+        print('number of rest improved : ', len(rest1.rows))
         # skipping print from original source of xpln20
         rule, most = xpln(data, best, rest)
+        rule1, most1 = xpln(data, best1, rest1)
+
+        def generate_sway_data(out, data, best, label):
+            if out[label] == None:
+                out[label] = {}
+                for col in data.cols.y:
+                    out[label][col.txt] = Num(col.at, col.txt)
+            ysNums(out[label], best)
+        
+        def generate_xpln_data(out, data, data1, label):
+            if out[label] == None:
+                out[label] = {}
+                for col in data.cols.y:
+                    out[label][col.txt] = Num(col.at, col.txt)
+            ysNums(out[label], data1)
+
         if len(rule) > 0:
             print("Rule : {}\nMost: {}".format(rule, most))
             rules.add(len(rule))
@@ -205,17 +224,9 @@ def xpln_with_n_iterations(n):
                     out['all'][col.txt] = Num(col.at, col.txt)
             ysNums(out['all'], data)
 
-            if out['sway'] == None:
-                out['sway'] = {}
-                for col in data.cols.y:
-                    out['sway'][col.txt] = Num(col.at, col.txt)
-            ysNums(out['sway'], best)
-
-            if out['xpln'] == None:
-                out['xpln'] = {}
-                for col in data.cols.y:
-                    out['xpln'][col.txt] = Num(col.at, col.txt)
-            ysNums(out['xpln'], data1)
+            generate_sway_data(out, data, best, 'sway')
+            generate_sway_data(out, data, best1, 'sway_1')
+            generate_xpln_data(out, data, data1, 'xpln')
             
             if out['ztop'] == None:
                 out['ztop'] = {}
@@ -235,7 +246,7 @@ def test_xpln20():
     out, rules = None, None
     while out == None:
         out,rules=xpln_with_n_iterations(20)
-    header=["all","sway","xpln","ztop"]
+    header=["all","sway", "sway_1","xpln","ztop"]
     
     vars = sorted(list(out["all"].keys()))
 
