@@ -233,18 +233,33 @@ def selects(rule, rows):
     return selected_rows
 
 def xpln_improved(data, best, rest):
-    all_bins = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
-    combined_bins = []
-    for col_bins in all_bins:
-        if col_bins != None:
-            for current_bin in col_bins:
-                combined_bins.append(current_bin)
-    r, most = combined_bins[:len(combined_bins)//2], .5
+    def v(has):
+        return value(has, len(best.rows), len(rest.rows), "best")
 
-    final_rules = dict()
-    for x in r:
-        final_rules[x.txt] = {'max': x.max, 'min': x.min, 'at': x.at}
-    return [final_rules], most
+    def score(ranges):
+        r = rule(ranges, maxSizes)
+        if r:
+            bestr = selects(r, best.rows)
+            restr = selects(r, rest.rows)
+            if len(bestr) + len(restr) > 0:
+                return v({'best': len(bestr), 'rest': len(restr)}), r
+
+    tmp, maxSizes = [], {}
+
+    bin_ranges = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
+    for ranges in bin_ranges:
+        if ranges == None:
+            print("None type ranges found")
+            continue
+        maxSizes[ranges[0].txt] = len(ranges)
+        for r in ranges:
+            tmp.append({'range': r, 'max': len(ranges), 'val': v(r.y.has)})
+
+    sorted_list = sorted(tmp, key=lambda d: d['val'])
+    r, most = firstN(sorted_list, score)
+
+    return r, most
+
 
 def xpln(data, best, rest):
     def v(has):
