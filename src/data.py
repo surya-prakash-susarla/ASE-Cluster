@@ -108,6 +108,7 @@ class Data:
 
         def proj(r):
             return {'row': r, 'x': cos(gap(r, A), gap(r, B), c)}
+
         if rows == None:
             rows = self.rows
         some = many(rows, global_options[K_HALVES])

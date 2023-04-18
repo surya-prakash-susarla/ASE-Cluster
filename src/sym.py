@@ -42,6 +42,7 @@ class Sym:
         elif symbol_1 == symbol_2:
             return 0
         return 1
+
     def value(has , nB=1, nR=1, sGoal=True, b=0,r=0):
         for i in range(len(has)):
             if i==sGoal :
