@@ -183,7 +183,7 @@ def test_half():
 def xpln_with_n_iterations(n):
     rules = Num()
 
-    out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None, 'sway_1': None}
+    out = {'all': None, 'sway': None, 'xpln': None, 'ztop': None, 'sway_1': None, 'xpln_1': None}
 
     for i in range(n):
         print('*'*20)
@@ -213,11 +213,14 @@ def xpln_with_n_iterations(n):
                     out[label][col.txt] = Num(col.at, col.txt)
             ysNums(out[label], data1)
 
-        if len(rule) > 0:
+        if len(rule) > 0 and len(rule1) > 0:
             print("Rule : {}\nMost: {}".format(rule, most))
             rules.add(len(rule))
+            print("Using rule : ", rule[0])
             data1 = data.clone(data.rows)
             data1 = data1.clone(selects(rule[0], data.rows))
+            data2 = data.clone(data.rows)
+            data2 = data2.clone(selects(rule1[0], data.rows))
             if out['all'] == None:
                 out['all'] = {}
                 for col in data.cols.y:
@@ -227,6 +230,7 @@ def xpln_with_n_iterations(n):
             generate_sway_data(out, data, best, 'sway')
             generate_sway_data(out, data, best1, 'sway_1')
             generate_xpln_data(out, data, data1, 'xpln')
+            generate_xpln_data(out, data, data2, 'xpln_1')
             
             if out['ztop'] == None:
                 out['ztop'] = {}
@@ -246,7 +250,7 @@ def test_xpln20():
     out, rules = None, None
     while out == None:
         out,rules=xpln_with_n_iterations(20)
-    header=["all","sway", "sway_1","xpln","ztop"]
+    header=["all","sway", "sway_1","xpln","xpln_1","ztop"]
     
     vars = sorted(list(out["all"].keys()))
 
