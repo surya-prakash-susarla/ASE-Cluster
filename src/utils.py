@@ -113,8 +113,19 @@ def many(row, new_size):
         temp.append(row[j])
     return temp
 
+def value(has, nB=1, nR =1, sGoal=True):
+    b = 0
+    r = 0
+    for x in has:
+        if x == sGoal:
+            b += has[x]
+        else:
+            r += has[x]
+    b = b/(nB+0.0000000001)
+    r = r/(nR+0.0000000001)
+    return (b*b)/(b+r)
 
-def value(has, nB=1, nR=1, sGoal=True):
+def value_improved(has, nB=1, nR=1, sGoal=True):
     b = 0
     r = 0
     for x in has:
@@ -234,7 +245,7 @@ def selects(rule, rows):
 
 def xpln_improved(data, best, rest):
     def v(has):
-        return value(has, len(best.rows), len(rest.rows), "best")
+        return value_improved(has, len(best.rows), len(rest.rows), "best")
 
     def score(ranges):
         r = rule(ranges, maxSizes)
