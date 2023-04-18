@@ -177,9 +177,9 @@ class Data:
         print('clustering underway')
 
         if len(categorical_cols) > 0:
-            labels = KPrototypes(n_clusters=2, n_init=4, n_jobs=4).fit_predict(cells, categorical=categorical_cols)
+            labels = KPrototypes(n_clusters=2, n_init=2, n_jobs=4).fit_predict(cells, categorical=categorical_cols)
         else:
-            labels = KMeans(n_clusters=2).fit_predict(cells)
+            labels = KMeans(n_clusters=2, n_init=2).fit_predict(cells)
 
         print('clustering done')
 
