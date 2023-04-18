@@ -164,7 +164,6 @@ class Data:
     def sway_improved(self, rows=None):
         if rows == None:
             rows = copy.deepcopy(self.rows)
-        print("type of rows : ", type(rows))
         best, rest = rows[:len(rows)//2], rows[len(rows)//2:]
         return self.clone(best), self.clone(rest), 0
 
