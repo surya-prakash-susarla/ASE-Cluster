@@ -232,6 +232,19 @@ def selects(rule, rows):
             selected_rows.append(row)
     return selected_rows
 
+def xpln_improved(data, best, rest):
+    all_bins = data.bins(data.cols.x, {'best': best.rows, 'rest': rest.rows})
+    combined_bins = []
+    for col_bins in all_bins:
+        if col_bins != None:
+            for current_bin in col_bins:
+                combined_bins.append(current_bin)
+    r, most = combined_bins[:len(combined_bins)//2], .5
+
+    final_rules = dict()
+    for x in r:
+        final_rules[x.txt] = {'max': x.max, 'min': x.min, 'at': x.at}
+    return [final_rules], most
 
 def xpln(data, best, rest):
     def v(has):

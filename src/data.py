@@ -236,7 +236,7 @@ def cliffsDelta(ns1, ns2):
                 gt = gt+1
             elif y > x:
                 lt = lt+1
-    return ((abs(lt-gt))/n) <= K_CLIFFS_DEFAULT_VALUE
+    return ((abs(lt-gt))/n) <= K_CLIFFS_DEFAULT_VALUE if n > 0 else False
 
 
 def diffs(nums1, nums2):
