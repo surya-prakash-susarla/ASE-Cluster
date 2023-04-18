@@ -201,7 +201,11 @@ class Data:
 
     def generate_best_rest_clusters(self, rows):
         y_cols = [x.at for x in self.cols.y]
+        all_cols = list(range(len(self.cols.x) + len(self.cols.y)))
+
+        updated_cols = [x for x in all_cols if x not in y_cols]
         categorical_cols = [x.at for x in self.cols.x if isinstance(x, Sym)]
+        categorical_cols = [updated_cols.index(x) for x in categorical_cols]
 
         best, rest = self.recursive_k_mode_cluster(rows, None, categorical_cols, y_cols)
 

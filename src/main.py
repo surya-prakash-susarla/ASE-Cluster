@@ -10,6 +10,9 @@ from globals import global_options, K_HELP, K_START_ACTION, K_FILE
 def generate_results() -> int:
     # Iterate through files in the data path.
     files = pathlib.Path('../etc/data/').iterdir()
+    # ONLY USE BELOW WHEN DEBUGGING:
+    # files = pathlib.Path('etc/data').iterdir()
+    # ONLY USE ABOVE WHEN DEBUGGING:
     skip = 0
     for f in files:
         if skip > 0:
@@ -21,7 +24,7 @@ def generate_results() -> int:
         test_xpln(1)
         print('<'*10 + '='*15 + '>'*10 + '\n'*2)
 
-        break
+        # break
 
     return 0
 
