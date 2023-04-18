@@ -21,7 +21,8 @@ def generate_results() -> int:
         print('\n'*2 + '<'*10 + '='*15 + '>'*10)
         print("Currently processing file : ", f)
         global_options[K_FILE] = f
-        test_xpln(1)
+        iterations = 20
+        test_xpln(iterations)
         print('<'*10 + '='*15 + '>'*10 + '\n'*2)
 
         # break

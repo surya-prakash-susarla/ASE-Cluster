@@ -170,18 +170,15 @@ class Data:
         return self.clone(best), self.clone(rest), evals
     
     def recursive_k_mode_cluster(self, rows, worse_rows, categorical_cols, y_cols, evals=0):
-        print("in rec : ", evals)
+        print("Evaluation : ", evals)
         cells = np.array([x.cells for x in rows])
         cells = np.delete(cells, y_cols, axis=1)
-
-        print('clustering underway')
 
         if len(categorical_cols) > 0:
             labels = KPrototypes(n_clusters=2, n_init=2, n_jobs=4).fit_predict(cells, categorical=categorical_cols)
         else:
             labels = KMeans(n_clusters=2, n_init=2).fit_predict(cells)
 
-        print('clustering done')
 
         best = []
         rest = []
