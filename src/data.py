@@ -14,7 +14,7 @@ import random
 import collections
 
 # trials for quick testing
-from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import KMeans
 import kmodes
 from kmodes.kprototypes import KPrototypes
 import numpy as np
@@ -169,12 +169,19 @@ class Data:
         best, rest, evals = self.worker(rows, [], evals0=0)
         return self.clone(best), self.clone(rest), evals
     
-    def recursive_k_mode_cluster(self, rows, worse_rows, categorical_cols, y_cols):
+    def recursive_k_mode_cluster(self, rows, worse_rows, categorical_cols, y_cols, evals=0):
+        print("in rec : ", evals)
         cells = np.array([x.cells for x in rows])
-
         cells = np.delete(cells, y_cols, axis=1)
 
-        labels = KPrototypes(n_clusters=2).fit_predict(cells, categorical=categorical_cols)
+        print('clustering underway')
+
+        if len(categorical_cols) > 0:
+            labels = KPrototypes(n_clusters=2, n_init=4, n_jobs=4).fit_predict(cells, categorical=categorical_cols)
+        else:
+            labels = KMeans(n_clusters=2).fit_predict(cells)
+
+        print('clustering done')
 
         best = []
         rest = []
@@ -197,7 +204,7 @@ class Data:
         if len(best) <= (len(self.rows)**global_options[K_MIN]):
             return rows, many(worse_rows, global_options[K_REST]*len(rows))
 
-        return self.recursive_k_mode_cluster(best, worse_rows, categorical_cols, y_cols)
+        return self.recursive_k_mode_cluster(best, worse_rows, categorical_cols, y_cols, evals+1)
 
     def generate_best_rest_clusters(self, rows):
         y_cols = [x.at for x in self.cols.y]
@@ -214,7 +221,6 @@ class Data:
     def sway_improved(self, rows=None):
         if rows == None:
             rows = copy.deepcopy(self.rows)
-        best, rest = rows[:len(rows)//2], rows[len(rows)//2:]
         best, rest = self.generate_best_rest_clusters(rows)
         return self.clone(best), self.clone(rest), 0
 
