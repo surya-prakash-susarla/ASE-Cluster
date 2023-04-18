@@ -10,7 +10,7 @@ from globals import global_options, K_HELP, K_START_ACTION, K_FILE
 def generate_results() -> int:
     # Iterate through files in the data path.
     files = pathlib.Path('../etc/data/').iterdir()
-    skip = 8
+    skip = 0
     for f in files:
         if skip > 0:
             skip -= 1
