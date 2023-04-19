@@ -283,12 +283,14 @@ def xpln_with_n_iterations(n):
     sway_s_values = np.array(sway_s_values)
     sway_p_values = np.array(sway_p_values)
 
+    print("\n" + '%'*15)
     print("NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence")
     print("Target columns : ", [k.txt for k in data.cols.y])
-    print("t test for sway - significance - ", np.mean(sway_s_values, axis=0))
-    print("t test for sway - confidence - ", np.mean(sway_p_values, axis=0))
-    print("t test for xpln - significance - ", np.mean(xpln_s_values, axis=0))
-    print("t test for xpln - confidence - ", np.mean(xpln_p_values, axis=0))
+    print("T test for sway - significance - ", np.mean(sway_s_values, axis=0))
+    print("T test for sway - confidence - ", np.mean(sway_p_values, axis=0))
+    print("T test for xpln - significance - ", np.mean(xpln_s_values, axis=0))
+    print("T test for xpln - confidence - ", np.mean(xpln_p_values, axis=0))
+    print('%'*15 + '\n')
 
     return out, rules
 
@@ -311,14 +313,6 @@ def test_xpln(n=20):
 
             num = nums[x]
             print(' & ' + str(rnd(num.mid(), 2)), end='')
-    
-    xpln_1_mid_values = [x.mid() for x in list(out['xpln_1'].values())]
-    xpln_mid_values = [x.mid() for x in list(out['xpln'].values())]
-    t_2, s_2 = ttest_ind(xpln_1_mid_values, xpln_mid_values)
-
-    print("NOTE: value has to be negative to indicate better xpln perf")    
-    print("xpln - t test - significance : ", t_2)
-    print("xpln - t test - confidence : ", s_2)
 
     def fun(x):
         if (x):
