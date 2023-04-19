@@ -426,6 +426,10 @@ def test_hpo():
     s, p = ttest_ind(base, updated)
 
     print("y cols : ", [k.txt for k in data.cols.y])
+    print("values : default | custom ")
+    for i in range(len(base)):
+        print(base[i], ' <> ', updated[i])
+    print()
     print("s values : ", s)
     print("p values : ", p)
 

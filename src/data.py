@@ -186,8 +186,11 @@ class Data:
                 best.append(rows[i])
             else:
                 rest.append(rows[i])
-        
+
+        sorted(best, key=cmp_to_key(self.better)) 
         best_mid = best[len(best)//2]
+
+        sorted(rest, key=cmp_to_key(self.better))
         rest_mid = rest[len(rest)//2]
 
         if not self.better(best_mid, rest_mid):
