@@ -438,3 +438,34 @@ def test_hpo():
 
     print("Custom configuration : ")
     print_config(config)
+
+
+def test_abl():
+    data = Data(global_options[K_FILE])
+
+    n_iterations = 20
+
+    _, _, base_mid = xpln_with_n_iterations(20)
+
+    base = []
+    for x in base_mid:
+        base.append([x.cells[k.at] for k in data.cols.y])
+
+    # SET ABLATION STUDY TO TRUE
+    global_options[K_ABLATION] = True
+
+    _, _, updated_mid = xpln_with_n_iterations(20)
+
+    updated = []
+    for x in updated_mid:
+        updated.append([x.cells[k.at] for k in data.cols.y])
+    
+    s, p = ttest_ind(base, updated)
+
+    print("y cols : ", [k.txt for k in data.cols.y])
+    print("values : without sort | after sort")
+    for i in range(len(base)):
+        print(base[i], ' <> ', updated[i])
+    print()
+    print("s values : ", s)
+    print("p values : ", p)
