@@ -22,7 +22,11 @@ def generate_results() -> int:
         print("Currently processing file : ", f)
         global_options[K_FILE] = f
         iterations = 20
-        test_xpln(iterations)
+        # test_xpln(iterations)
+
+        print("Testing HPO")
+        test_hpo()
+
         print('<'*10 + '='*15 + '>'*10 + '\n'*2)
 
         # break

@@ -11,6 +11,7 @@ import copy
 
 from scipy.stats import ttest_ind
 import numpy as np
+import itertools
 
 
 def test_xpln():
@@ -339,4 +340,11 @@ def test_xpln(n=20):
               " std " + str(rnd(rules.div())))
 
 def test_hpo():
-    search_space = {}
+    search_space = {
+        'entropy': [-2, -1.75, -1.5, -1],
+        'halves': [512, 256, 128],
+        'min': [.7, .5, .3]
+    }
+
+    permutations = itertools.product(*list(search_space.values()))
+    print("All possible permutations : ", len(list(permutations)))
