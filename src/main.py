@@ -15,7 +15,11 @@ def generate_results() -> int:
     # ONLY USE ABOVE WHEN DEBUGGING:
     skip = 0
 
-    check_hpo = True
+    k_def = 0
+    k_hpo = 1
+    k_abl = 2
+
+    mode = k_abl
 
     for f in files:
         if skip > 0:
@@ -26,12 +30,15 @@ def generate_results() -> int:
         global_options[K_FILE] = f
         iterations = 20
 
-        if not check_hpo:
+        if mode == k_def:
             test_xpln(iterations)
-        else:
+        elif mode == k_hpo:
             test_hpo()
-
             # HPO test only on one file
+            break
+        else:
+            test_abl()
+            # ABL test only on one file
             break
 
         print('<'*10 + '='*15 + '>'*10 + '\n'*2)
