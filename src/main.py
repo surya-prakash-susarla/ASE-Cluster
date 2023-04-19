@@ -19,7 +19,7 @@ def generate_results() -> int:
     k_hpo = 1
     k_abl = 2
 
-    mode = k_abl
+    mode = k_def
 
     for f in files:
         if skip > 0:
