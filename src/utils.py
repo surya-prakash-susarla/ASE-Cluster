@@ -141,6 +141,7 @@ def value_improved(has, nB=1, nR=1, sGoal=True):
     # return entropy
     return ((b*b)/(b+r)) + entropy
 
+
 def prune(rule, maxSize):
     n = 0
     tmp = {}
