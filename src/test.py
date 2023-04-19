@@ -192,6 +192,8 @@ def xpln_with_n_iterations(n):
     sway_s_values = []
     sway_p_values = []
 
+    xpln_s_values = []
+    xpln_p_values = []
 
     for i in range(n):
         print('*'*20)
@@ -249,9 +251,21 @@ def xpln_with_n_iterations(n):
             for x in best1.rows:
                 s_1.append([x.cells[k.at] for k in data.cols.y])
 
-            s, p = ttest_ind(s_1, s)
-            sway_s_values.append(s)
-            sway_p_values.append(p)
+            s_s, s_p = ttest_ind(s_1, s)
+            sway_s_values.append(s_s)
+            sway_p_values.append(s_p)
+
+            x_1 = []
+            for x in data1.rows:
+                x_1.append([x.cells[k.at] for k in data.cols.y])
+            
+            x_2 = []
+            for x in data2.rows:
+                x_2.append([x.cells[k.at] for k in data.cols.y])
+            
+            x_s, x_p = ttest_ind(x_2, x_1)
+            xpln_s_values.append(x_s)
+            xpln_p_values.append(x_p)
 
             if out['ztop'] == None:
                 out['ztop'] = {}
@@ -269,9 +283,12 @@ def xpln_with_n_iterations(n):
     sway_s_values = np.array(sway_s_values)
     sway_p_values = np.array(sway_p_values)
 
-    print("NOTE: value has to be negative to indicate better sway perf, lower p values indicate more confidence")    
+    print("NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence")
+    print("Target columns : ", [k.txt for k in data.cols.y])
     print("t test for sway - significance - ", np.mean(sway_s_values, axis=0))
     print("t test for sway - confidence - ", np.mean(sway_p_values, axis=0))
+    print("t test for xpln - significance - ", np.mean(xpln_s_values, axis=0))
+    print("t test for xpln - confidence - ", np.mean(xpln_p_values, axis=0))
 
     return out, rules
 
