@@ -138,7 +138,8 @@ def value_improved(has, nB=1, nR=1, sGoal=True):
     log_p_b = math.log(p_b, 2) if p_b > 0 else 0
     log_p_r = math.log(p_r, 2) if p_r > 0 else 0
     entropy = ((p_b*log_p_b) + (p_r*log_p_r)) - (2*p_r)
-    return entropy
+    # return entropy
+    return p_b
 
 def prune(rule, maxSize):
     n = 0
@@ -204,7 +205,7 @@ def firstN(sorted_list, scoring_function, improved = False):
     if not improved:
         pruned_ranges = [x for x in sorted_list if x['val'] > .05]
     else:
-        pruned_ranges = [x for x in sorted_list if x['val'] > -1.75]
+        pruned_ranges = [x for x in sorted_list if x['val'] > global_options[K_ENTROPY]]
 
     out = []
     most = -1

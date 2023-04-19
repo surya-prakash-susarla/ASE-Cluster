@@ -11,6 +11,9 @@ import copy
 
 from scipy.stats import ttest_ind
 import numpy as np
+import itertools
+from sklearn.cluster import KMeans
+from functools import cmp_to_key
 
 
 def test_xpln():
@@ -195,6 +198,8 @@ def xpln_with_n_iterations(n):
     xpln_s_values = []
     xpln_p_values = []
 
+    sway_mid = []
+
     for i in range(n):
         print('*'*20)
         print("Iteration : ", i+1)
@@ -209,6 +214,8 @@ def xpln_with_n_iterations(n):
         # skipping print from original source of xpln20
         rule, most = xpln(data, best, rest)
         rule1, most1 = xpln_improved(data, best1, rest1)
+
+        sway_mid.append(best1.rows[len(best1.rows)//2])
 
         def generate_sway_data(out, data, best, label):
             if out[label] == None:
@@ -292,13 +299,13 @@ def xpln_with_n_iterations(n):
     print("T test for xpln - confidence - ", np.mean(xpln_p_values, axis=0))
     print('%'*15 + '\n')
 
-    return out, rules
+    return out, rules, sway_mid
 
 
 def test_xpln(n=20):
     out, rules = None, None
     while out == None:
-        out, rules = xpln_with_n_iterations(n)
+        out, rules, _ = xpln_with_n_iterations(n)
     header = ["all", "sway", "sway_1", "xpln", "xpln_1", "ztop"]
 
     vars = sorted(list(out["all"].keys()))
@@ -337,3 +344,93 @@ def test_xpln(n=20):
     if rules.n > 0:
         print("\n rule size " + "mu " + str(rules.mid()) +
               " std " + str(rnd(rules.div())))
+
+def set_config(values):
+    global_options[K_ENTROPY] = values[0]
+    global_options[K_REST] = values[1]
+    global_options[K_MIN] = values[2]
+
+def rec_hpo(values, n_iter=20):
+    if len(values) == 1:
+        return values[0]
+    
+    labels = KMeans(n_clusters=2).fit_predict(values)
+    first = []
+    second = []
+    for i in range(len(values)):
+        if labels[i] == 1:
+            first.append(values[i])
+        else:
+            second.append(values[i])
+    
+    first_mid = first[len(first)//2]
+    second_mid = second[len(second)//2]
+
+    data = Data(global_options[K_FILE])
+
+    set_config(first_mid)
+    _, _, mid1 = xpln_with_n_iterations(n_iter)
+
+    sorted(mid1, key=cmp_to_key(data.better))
+
+    set_config(second_mid)
+    _, _, mid2 = xpln_with_n_iterations(n_iter)
+
+    sorted(mid2, key=cmp_to_key(data.better))
+
+
+    if data.better(mid1[0], mid2[0]):
+        return rec_hpo(first)
+    else:
+        return rec_hpo(second)
+
+def test_hpo():
+    search_space = {
+        'entropy': [-2, -1.75, -1.5, -1],
+        'rest': [4, 3],
+        'min': [.7, .5, .3]
+    }
+
+    permutations = list(itertools.product(*list(search_space.values())))
+    print("All possible permutations : ", len(permutations))
+
+    data = Data(global_options[K_FILE])
+
+    n_iterations = 20
+
+    _, _, base_mid = xpln_with_n_iterations(20)
+
+    base = []
+    for x in base_mid:
+        base.append([x.cells[k.at] for k in data.cols.y])
+
+    rec_iter = 20
+    config = rec_hpo(permutations, rec_iter)
+
+    def print_config(config):
+        print("entropy : ", config[0])
+        print("rest : ", config[1])
+        print("min : ", config[2])
+
+    # used for printing at the end    
+    default_config = [global_options[K_ENTROPY], global_options[K_REST], global_options[K_MIN]]
+
+    set_config(config)
+
+    _, _, updated_mid = xpln_with_n_iterations(20)
+
+    updated = []
+    for x in updated_mid:
+        updated.append([x.cells[k.at] for k in data.cols.y])
+
+    s, p = ttest_ind(base, updated)
+
+    print("y cols : ", [k.txt for k in data.cols.y])
+    print("s values : ", s)
+    print("p values : ", p)
+
+    print("Default configuration : ")
+    print_config(default_config)
+
+    print("Custom configuration : ")
+    print_config(config)

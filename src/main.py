@@ -14,6 +14,9 @@ def generate_results() -> int:
     # files = pathlib.Path('etc/data').iterdir()
     # ONLY USE ABOVE WHEN DEBUGGING:
     skip = 0
+
+    check_hpo = True
+
     for f in files:
         if skip > 0:
             skip -= 1
@@ -22,7 +25,15 @@ def generate_results() -> int:
         print("Currently processing file : ", f)
         global_options[K_FILE] = f
         iterations = 20
-        test_xpln(iterations)
+
+        if not check_hpo:
+            test_xpln(iterations)
+        else:
+            test_hpo()
+
+            # HPO test only on one file
+            break
+
         print('<'*10 + '='*15 + '>'*10 + '\n'*2)
 
         # break

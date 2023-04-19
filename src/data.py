@@ -179,7 +179,6 @@ class Data:
         else:
             labels = KMeans(n_clusters=2, n_init=2).fit_predict(cells)
 
-
         best = []
         rest = []
         for i in range(len(rows)):
