@@ -1,7 +1,7 @@
 import copy
 import math
 from globals import *
-from csv import get_csv_rows
+from csv_reader import get_csv_rows
 from cols import Cols
 from row import Row
 from utils import rint, cosine, show, get_repgrid_file_contents, many, rand, extend, merges

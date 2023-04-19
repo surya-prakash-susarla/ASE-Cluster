@@ -2,7 +2,7 @@ from sym import Sym
 from num import Num
 from utils import rand, rint, rnd, show, show_tree, tree, value, xpln, showRule, selects, ysNums, xpln_improved
 from data import Data, rep_cols, rep_rows, rep_grid, rep_place, transpose, cliffsDelta, bootstrap
-from csv import get_csv_rows
+from csv_reader import get_csv_rows
 from collections import OrderedDict
 from globals import *
 from data import diffs

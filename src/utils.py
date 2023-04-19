@@ -139,8 +139,8 @@ def value_improved(has, nB=1, nR=1, sGoal=True):
     log_p_r = math.log(p_r, 2) if p_r > 0 else 0
     entropy = ((p_b*log_p_b) + (p_r*log_p_r))
     # return entropy
-    return (b*b)/(b+r) - entropy
-    # return p_b
+    return ((b*b)/(b+r)) + entropy
+
 
 def prune(rule, maxSize):
     n = 0

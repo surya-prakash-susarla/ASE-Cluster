@@ -6,7 +6,7 @@ def coerce(s):
     try:
         return_value = s.strip() if bool(re.search(r'[a-zA-Z]', s)) else float(s)
     except ValueError as error:
-        print("Conversion Error : ", error)
+        # print("Conversion Error : ", error)
         return (return_value, False)
     else:
         return (return_value, True)
@@ -34,7 +34,7 @@ def get_csv_rows(filepath: str) -> []:
                     row.append(converted_value[0])
 
             if invalid_row:
-                print("Skipping invalid input line: ", line)
+                # print("Skipping invalid input line: ", line)
                 continue
             else:
                 rows.append(row)
