@@ -2,10 +2,21 @@ import sys
 import math
 import collections
 import pathlib
-
+import numpy as np
 from test import *
 from cli import initialize_from_cli, print_help
 from globals import global_options, K_HELP, K_START_ACTION, K_FILE
+import pandas as pd
+from data import Data
+
+def print_corr():
+    data = Data(global_options[K_FILE])
+    cells = [x.cells for x in data.rows]
+    cells = np.array(cells)
+    cells = np.delete(cells, [x.at for x in data.cols.x], axis = 1)
+    cells = pd.DataFrame(cells)
+    print(cells.corr())
+    
 
 def generate_results() -> int:
     # Iterate through files in the data path.
@@ -19,7 +30,7 @@ def generate_results() -> int:
     k_hpo = 1
     k_abl = 2
 
-    mode = k_abl
+    mode = k_def
 
     for f in files:
         if skip > 0:
@@ -28,8 +39,8 @@ def generate_results() -> int:
         print('\n'*2 + '<'*10 + '='*15 + '>'*10)
         print("Currently processing file : ", f)
         global_options[K_FILE] = f
-        iterations = 20
-
+        iterations = 1
+        print_corr()
         if mode == k_def:
             test_xpln(iterations)
         elif mode == k_hpo:
