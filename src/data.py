@@ -187,10 +187,11 @@ class Data:
             else:
                 rest.append(rows[i])
 
-        sorted(best, key=cmp_to_key(self.better)) 
+        if global_options[K_ABLATION]:
+            sorted(best, key=cmp_to_key(self.better)) 
+            sorted(rest, key=cmp_to_key(self.better))
+        
         best_mid = best[len(best)//2]
-
-        sorted(rest, key=cmp_to_key(self.better))
         rest_mid = rest[len(rest)//2]
 
         if not self.better(best_mid, rest_mid):
