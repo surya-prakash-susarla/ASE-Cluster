@@ -9,6 +9,8 @@ from data import diffs
 
 import copy
 
+from scipy.stats import ttest_ind
+
 
 def test_xpln():
     data = Data(global_options[K_FILE])
@@ -267,6 +269,25 @@ def test_xpln(n=20):
 
             num = nums[x]
             print(' & ' + str(rnd(num.mid(), 2)), end='')
+    
+    # scipy t-test
+    print()
+    sway_1_mid_values = [x.mid() for x in list(out['sway_1'].values())]
+    sway_mid_values = [x.mid() for x in list(out['sway'].values())]
+    t_1, s_1 = ttest_ind(sway_1_mid_values, sway_mid_values)
+
+    print("NOTE: value has to be negative to indicate better sway perf")    
+    print("sway - t test - significance : ", t_1)
+    print("sway - t test - confidence : ", s_1)
+
+    print()
+    xpln_1_mid_values = [x.mid() for x in list(out['xpln_1'].values())]
+    xpln_mid_values = [x.mid() for x in list(out['xpln'].values())]
+    t_2, s_2 = ttest_ind(xpln_1_mid_values, xpln_mid_values)
+
+    print("NOTE: value has to be negative to indicate better xpln perf")    
+    print("xpln - t test - significance : ", t_2)
+    print("xpln - t test - confidence : ", s_2)
 
     def fun(x):
         if (x):
