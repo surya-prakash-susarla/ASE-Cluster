@@ -21,10 +21,12 @@ def print_corr():
 def generate_results() -> int:
     # Iterate through files in the data path.
     files = pathlib.Path('../etc/data/').iterdir()
+    files = list(files)
+    print("files : ", files)
     # ONLY USE BELOW WHEN DEBUGGING:
     # files = pathlib.Path('etc/data').iterdir()
     # ONLY USE ABOVE WHEN DEBUGGING:
-    skip = 0
+    skip = 1
 
     k_def = 0
     k_hpo = 1
@@ -32,10 +34,13 @@ def generate_results() -> int:
 
     mode = k_def
 
+    break_at_end = False
     for f in files:
         if skip > 0:
             skip -= 1
             continue
+        else:
+            break_at_end = True
         print('\n'*2 + '<'*10 + '='*15 + '>'*10)
         print("Currently processing file : ", f)
         global_options[K_FILE] = f
@@ -54,7 +59,9 @@ def generate_results() -> int:
 
         print('<'*10 + '='*15 + '>'*10 + '\n'*2)
 
-        # break
+        if break_at_end:
+            print("braeking")
+            break
 
     return 0
 

@@ -1,0 +1,1030 @@
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/nasa93dem.csv
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  5
+number of rest :  20
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.7111111110957037
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'time': {'max': 'n', 'min': 'n', 'at': 13}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}]
+Most: 0.7912087911968361
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'plex': {'max': 'n', 'min': 'n', 'at': 20}}, {'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}]
+Most: 0.7912087911968361
+Using rule :  {'plex': {'max': 'n', 'min': 'n', 'at': 20}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'rely': {'max': 'n', 'min': 'n', 'at': 8}}, {'rely': {'max': 'n', 'min': 'n', 'at': 8}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}]
+Most: 0.8571428571306122
+Using rule :  {'rely': {'max': 'n', 'min': 'n', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'time': {'max': 'vh', 'min': 'vh', 'at': 13}}, {'time': {'max': 'vh', 'min': 'vh', 'at': 13}, 'rely': {'max': 'n', 'min': 'n', 'at': 8}}]
+Most: 0.9999999999857143
+Using rule :  {'time': {'max': 'vh', 'min': 'vh', 'at': 13}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}]
+Most: 0.823529411751384
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'time': {'max': 'vh', 'min': 'vh', 'at': 13}}, {'time': {'max': 'vh', 'min': 'vh', 'at': 13}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.9999999999857143
+Using rule :  {'time': {'max': 'vh', 'min': 'vh', 'at': 13}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'data': {'max': 'l', 'min': 'l', 'at': 9}}]
+Most: 0.9230769230606508
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  5
+number of rest :  20
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'time': {'max': 'n', 'min': 'n', 'at': 13}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}}]
+Most: 0.8695652173722117
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}]
+Most: 0.9032258064377733
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'data': {'max': 'l', 'min': 'l', 'at': 9}}]
+Most: 0.8571428571270409
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}]
+Most: 0.9230769230606508
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'time': {'max': 'vh', 'min': 'vh', 'at': 13}}]
+Most: 0.9333333333193334
+Using rule :  {'time': {'max': 'vh', 'min': 'vh', 'at': 13}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.9333333333193334
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'n', 'min': 'n', 'at': 9}}, {'data': {'max': 'n', 'min': 'n', 'at': 9}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}]
+Most: 0.7346938775394003
+Using rule :  {'data': {'max': 'n', 'min': 'n', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}}]
+Most: 0.9999999999833333
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'apex': {'max': 'n', 'min': 'n', 'at': 19}}]
+Most: 0.9230769230606508
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'n', 'min': 'n', 'at': 9}}, {'data': {'max': 'n', 'min': 'n', 'at': 9}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}}]
+Most: 0.9032258064377733
+Using rule :  {'data': {'max': 'n', 'min': 'n', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'apex': {'max': 'n', 'min': 'n', 'at': 19}}]
+Most: 0.8888888888728396
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}]
+Most: 0.8228571428450351
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'plex': {'max': 'l', 'min': 'l', 'at': 20}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+T test for sway - significance -  [-0.39077616 -0.60050477 -0.24567732 -0.1433957 ]
+T test for sway - confidence -  [0.22732036 0.25321972 0.35363206 0.33207249]
+T test for xpln - significance -  [-0.51311528 -0.17554686 -0.12491397 -0.01680426]
+T test for xpln - confidence -  [0.56084506 0.72237309 0.68958191 0.69677758]
+%%%%%%%%%%%%%%%
+
+&Defects- &Effort- &Kloc+ &Months- 
+all  & 3761.76 & 624.48 & 94.02 & 24.18
+sway  & 1495.42 & 243.97 & 35.21 & 16.69
+sway_1  & 970.47 & 109.03 & 21.5 & 15.42
+xpln  & 2794.14 & 381.98 & 71.39 & 20.55
+xpln_1  & 2576.2 & 319.69 & 55.91 & 19.86
+ztop  & 384.69 & 52.56 & 12.34 & 11.14
+.
+&Defects- &Effort- &Kloc+ &Months- 
+all to all &=&=&=&=
+all to sway &≠&≠&≠&≠
+all to sway_1 &≠&≠&≠&≠
+all to xpln &≠&≠&≠&≠
+all to xpln_1 &≠&≠&≠&≠
+all to ztop &≠&≠&≠&≠
+ rule size mu 2.25 std 0.716
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/healthCloseIsses12mths0001-hard.csv
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  151
+number of rest improved :  604
+Rule : [{'Min_sample_leaves': {'max': 13.0, 'min': 10.0, 'at': 5}}]
+Most: 0.22518321119218573
+Using rule :  {'Min_sample_leaves': {'max': 13.0, 'min': 10.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  106
+number of rest improved :  424
+Rule : [{'Min_sample_leaves': {'max': 9.0, 'min': 6.0, 'at': 5}}]
+Most: 0.3610232067505193
+Using rule :  {'Min_sample_leaves': {'max': 9.0, 'min': 6.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  114
+number of rest improved :  456
+Rule : [{'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}}]
+Most: 0.4556962025310069
+Using rule :  {'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 30.0, 'at': 3}, 'Max_depth': {'max': 12.0, 'min': 9.0, 'at': 7}, 'Min_sample_leaves': {'max': 13.0, 'min': 12.0, 'at': 5}, 'Min_impurity_decrease': {'max': 2.75, 'min': 2.25, 'at': 6}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  131
+number of rest improved :  524
+Rule : [{'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}]
+Most: 0.797814628139406
+Using rule :  {'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 60.0, 'at': 3}, 'Min_sample_leaves': {'max': 5.0, 'min': -10000000000, 'at': 5}, 'Max_depth': {'max': 13.0, 'min': 10.0, 'at': 7}, 'Min_impurity_decrease': {'max': 7.5, 'min': 6.75, 'at': 6}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  132
+number of rest improved :  528
+Rule : [{'N_estimators': {'max': 30.0, 'min': -10000000000, 'at': 3}}]
+Most: 0.17088607594911023
+Using rule :  {'N_estimators': {'max': 30.0, 'min': -10000000000, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  136
+number of rest improved :  544
+Rule : [{'Min_impurity_decrease': {'max': 6.75, 'min': 5.5, 'at': 6}}]
+Most: 0.294785276073185
+Using rule :  {'Min_impurity_decrease': {'max': 6.75, 'min': 5.5, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  132
+number of rest improved :  528
+Rule : [{'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}]
+Most: 0.3102748570369998
+Using rule :  {'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  132
+number of rest improved :  528
+Rule : [{'Min_impurity_decrease': {'max': 2.25, 'min': 0.75, 'at': 6}}]
+Most: 0.3441427853187239
+Using rule :  {'Min_impurity_decrease': {'max': 2.25, 'min': 0.75, 'at': 6}}
+Using second rule :  {'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  130
+number of rest improved :  520
+Rule : [{'Min_sample_leaves': {'max': 18.0, 'min': 15.0, 'at': 5}}]
+Most: 0.2434782608691914
+Using rule :  {'Min_sample_leaves': {'max': 18.0, 'min': 15.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  137
+number of rest improved :  548
+Rule : [{'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}}]
+Most: 0.39404145077663866
+Using rule :  {'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  140
+number of rest improved :  560
+Rule : [{'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}]
+Most: 0.6338028169005241
+Using rule :  {'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  128
+number of rest improved :  512
+Rule : [{'Min_sample_leaves': {'max': 4.0, 'min': 1.0, 'at': 5}}]
+Most: 0.47999999999931003
+Using rule :  {'Min_sample_leaves': {'max': 4.0, 'min': 1.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  123
+number of rest improved :  492
+Rule : [{'N_estimators': {'max': 130.0, 'min': 100.0, 'at': 3}}]
+Most: 0.2649396526342662
+Using rule :  {'N_estimators': {'max': 130.0, 'min': 100.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  123
+number of rest improved :  492
+Rule : [{'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}}]
+Most: 0.447074468084494
+Using rule :  {'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 60.0, 'at': 3}, 'Min_sample_leaves': {'max': 5.0, 'min': -10000000000, 'at': 5}, 'Max_depth': {'max': 10000000000, 'min': 19.0, 'at': 7}, 'Min_impurity_decrease': {'max': 1.5, 'min': 0.75, 'at': 6}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  165
+number of rest improved :  660
+Rule : [{'Min_impurity_decrease': {'max': 0.75, 'min': -10000000000, 'at': 6}}]
+Most: 0.4132928475028126
+Using rule :  {'Min_impurity_decrease': {'max': 0.75, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  143
+number of rest improved :  572
+Rule : [{'Max_depth': {'max': 13.0, 'min': 10.0, 'at': 7}}]
+Most: 0.33957033956982474
+Using rule :  {'Max_depth': {'max': 13.0, 'min': 10.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  132
+number of rest improved :  528
+Rule : [{'Max_depth': {'max': 13.0, 'min': 10.0, 'at': 7}}]
+Most: 0.4023263770093191
+Using rule :  {'Max_depth': {'max': 13.0, 'min': 10.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  140
+number of rest improved :  560
+Rule : [{'N_estimators': {'max': 10000000000, 'min': 170.0, 'at': 3}}]
+Most: 0.45016487607634625
+Using rule :  {'N_estimators': {'max': 10000000000, 'min': 170.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  118
+number of rest improved :  472
+Rule : [{'N_estimators': {'max': 40.0, 'min': 10.0, 'at': 3}}]
+Most: 0.6749999999990659
+Using rule :  {'N_estimators': {'max': 40.0, 'min': 10.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  138
+number of rest improved :  552
+Rule : [{'Min_sample_leaves': {'max': 9.0, 'min': 6.0, 'at': 5}}]
+Most: 0.39712087366533805
+Using rule :  {'Min_sample_leaves': {'max': 9.0, 'min': 6.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['MRE-', 'ACC+', 'PRED40+']
+T test for sway - significance -  [ 5.90010346 -5.07885556  1.87112188]
+T test for sway - confidence -  [1.46031639e-08 2.31176586e-06 1.62158326e-01]
+T test for xpln - significance -  [ 0.40674373 -0.1267943   0.14761961]
+T test for xpln - confidence -  [0.45482045 0.40076    0.48104736]
+%%%%%%%%%%%%%%%
+
+&ACC+ &MRE- &PRED40+ 
+all  & 5.15 & 82.32 & 22.1
+sway  & 7.39 & 74.62 & 19.5
+sway_1  & 5.07 & 83.0 & 22.88
+xpln  & 5.2 & 82.27 & 21.92
+xpln_1  & 5.12 & 82.46 & 21.97
+ztop  & 5.17 & 81.97 & 21.9
+.
+&ACC+ &MRE- &PRED40+ 
+all to all &=&=&=
+all to sway &≠&≠&≠
+all to sway_1 &=&=&≠
+all to xpln &=&=&=
+all to xpln_1 &=&=&=
+all to ztop &=&=&=
+ rule size mu 1.0 std 0.0
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/SSM.csv
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  467
+number of rest :  1868
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}, 'v': {'max': 1.0, 'min': 1.0, 'at': 4}}]
+Most: 0.9429581019684922
+Using rule :  {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'sMOOTHER': {'max': 1.0, 'min': 1.0, 'at': 1}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  467
+number of rest :  1868
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}, {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.8942077549064473
+Using rule :  {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}
+Using second rule :  {'ALPHA': {'max': 10000000000, 'min': 65.0, 'at': 9}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}, {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.9408224674019972
+Using rule :  {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'ALPHA': {'max': 10000000000, 'min': 65.0, 'at': 9}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}, {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}, 'v': {'max': 1.0, 'min': 1.0, 'at': 4}}]
+Most: 0.8874172185428413
+Using rule :  {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'BETA': {'max': 10000000000, 'min': 65.0, 'at': 10}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  644
+number of rest improved :  2576
+Rule : [{'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'v': {'max': 1.0, 'min': 1.0, 'at': 4}}]
+Most: 0.8891044877602176
+Using rule :  {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'BETA': {'max': 10000000000, 'min': 70.0, 'at': 10}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}, {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}, 'v': {'max': 1.0, 'min': 1.0, 'at': 4}}]
+Most: 0.9441368897833837
+Using rule :  {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}
+Using second rule :  {'BETA': {'max': 50.0, 'min': -10000000000, 'at': 10}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}, {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.8929081389812319
+Using rule :  {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}
+Using second rule :  {'ALPHA': {'max': 10000000000, 'min': 70.0, 'at': 9}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+Evaluation :  10
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  492
+number of rest improved :  1968
+Rule : [{'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}}]
+Most: 0.9417670682728828
+Using rule :  {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'BETA': {'max': 10000000000, 'min': 70.0, 'at': 10}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}, {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.9014896684284337
+Using rule :  {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}
+Using second rule :  {'ALPHA': {'max': 45.0, 'min': -10000000000, 'at': 9}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  468
+number of rest :  1872
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}, {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.8927038626607382
+Using rule :  {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'ALPHA': {'max': 10000000000, 'min': 70.0, 'at': 9}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}, 'rELAXPARAMETER': {'max': 1.0, 'min': 1.0, 'at': 3}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.9375312343825993
+Using rule :  {'cOLORGS': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'BETA': {'max': 10000000000, 'min': 85.0, 'at': 10}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}, {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.8853232656911588
+Using rule :  {'zEBRALINE': {'max': 1.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'BETA': {'max': 65.0, 'min': -10000000000, 'at': 10}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
