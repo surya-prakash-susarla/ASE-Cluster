@@ -54,6 +54,7 @@ def default_cli_options():
     global_options[K_CLIFFS] = K_CLIFFS_DEFAULT_VALUE
     global_options[K_D] = K_D_DEFAULT_VALUE
     global_options[K_BINS] = K_BINS_DEFAULT_VALUE
+    global_options[K_ENTROPY] = K_ENTROPY_DEFAULT_VALUE
 
 def initialize_from_cli():
     default_cli_options()

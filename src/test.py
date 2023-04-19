@@ -337,3 +337,6 @@ def test_xpln(n=20):
     if rules.n > 0:
         print("\n rule size " + "mu " + str(rules.mid()) +
               " std " + str(rnd(rules.div())))
+
+def test_hpo():
+    search_space = {}
