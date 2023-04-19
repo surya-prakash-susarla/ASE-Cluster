@@ -10,6 +10,7 @@ from data import diffs
 import copy
 
 from scipy.stats import ttest_ind
+import numpy as np
 
 
 def test_xpln():
@@ -188,6 +189,10 @@ def xpln_with_n_iterations(n):
     out = {'all': None, 'sway': None, 'xpln': None,
            'ztop': None, 'sway_1': None, 'xpln_1': None}
 
+    sway_s_values = []
+    sway_p_values = []
+
+
     for i in range(n):
         print('*'*20)
         print("Iteration : ", i+1)
@@ -237,6 +242,17 @@ def xpln_with_n_iterations(n):
             generate_xpln_data(out, data, data1, 'xpln')
             generate_xpln_data(out, data, data2, 'xpln_1')
 
+            s = []
+            for x in best.rows:
+                s.append([x.cells[k.at] for k in data.cols.y])
+            s_1 = []
+            for x in best1.rows:
+                s_1.append([x.cells[k.at] for k in data.cols.y])
+
+            s, p = ttest_ind(s_1, s)
+            sway_s_values.append(s)
+            sway_p_values.append(p)
+
             if out['ztop'] == None:
                 out['ztop'] = {}
                 for col in data.cols.y:
@@ -246,8 +262,17 @@ def xpln_with_n_iterations(n):
             top = data.clone(data.rows)
             top = top.clone(tmp)
             ysNums(out['ztop'], top)
+        else:
+            print("rule generation failed")
+        print('-'*20)
 
-            print('-'*20)
+    sway_s_values = np.array(sway_s_values)
+    sway_p_values = np.array(sway_p_values)
+
+    print("NOTE: value has to be negative to indicate better sway perf, lower p values indicate more confidence")    
+    print("t test for sway - significance - ", np.mean(sway_s_values, axis=0))
+    print("t test for sway - confidence - ", np.mean(sway_p_values, axis=0))
+
     return out, rules
 
 
@@ -270,17 +295,6 @@ def test_xpln(n=20):
             num = nums[x]
             print(' & ' + str(rnd(num.mid(), 2)), end='')
     
-    # scipy t-test
-    print()
-    sway_1_mid_values = [x.mid() for x in list(out['sway_1'].values())]
-    sway_mid_values = [x.mid() for x in list(out['sway'].values())]
-    t_1, s_1 = ttest_ind(sway_1_mid_values, sway_mid_values)
-
-    print("NOTE: value has to be negative to indicate better sway perf")    
-    print("sway - t test - significance : ", t_1)
-    print("sway - t test - confidence : ", s_1)
-
-    print()
     xpln_1_mid_values = [x.mid() for x in list(out['xpln_1'].values())]
     xpln_mid_values = [x.mid() for x in list(out['xpln'].values())]
     t_2, s_2 = ttest_ind(xpln_1_mid_values, xpln_mid_values)
