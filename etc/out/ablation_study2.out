@@ -1,0 +1,706 @@
+files :  [PosixPath('../etc/data/nasa93dem.csv'), PosixPath('../etc/data/healthCloseIsses12mths0001-hard.csv'), PosixPath('../etc/data/SSM.csv'), PosixPath('../etc/data/SSN.csv'), PosixPath('../etc/data/auto93.csv'), PosixPath('../etc/data/auto2.csv'), PosixPath('../etc/data/coc10000.csv'), PosixPath('../etc/data/healthCloseIsses12mths0011-easy.csv'), PosixPath('../etc/data/coc1000.csv'), PosixPath('../etc/data/pom.csv'), PosixPath('../etc/data/china.csv')]
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/nasa93dem.csv
+original shape of cells :  (93, 29)
+x cols :  ['prec', 'flex', 'resl', 'team', 'pmat', 'rely', 'data', 'cplx', 'ruse', 'docu', 'time', 'stor', 'pvol', 'acap', 'pcap', 'pcon', 'apex', 'plex', 'ltex', 'tool', 'site', 'sced']
+len of x cols :  22
+y cols :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+shape of cells after deletion :  (93, 4)
+      0      1      2     3
+0  25.9  117.6  808.0  15.3
+1  24.6  117.6  767.0  15.0
+2   7.7   31.2  240.0  10.1
+3   8.2   36.0  256.0  10.4
+4   9.7   25.2  302.0  11.0
+          0         1         2         3
+0  1.000000  0.594941  0.963195  0.896749
+1  0.594941  1.000000  0.578790  0.741530
+2  0.963195  0.578790  1.000000  0.871345
+3  0.896749  0.741530  0.871345  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  5
+number of rest :  20
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.7111111110957037
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}]
+Most: 0.9599999999835199
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'plex': {'max': 'n', 'min': 'n', 'at': 20}}, {'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}]
+Most: 0.7912087911968361
+Using rule :  {'plex': {'max': 'n', 'min': 'n', 'at': 20}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'ltex': {'max': 'l', 'min': 'l', 'at': 21}}]
+Most: 0.5714285714204081
+Using rule :  {'ltex': {'max': 'l', 'min': 'l', 'at': 21}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'rely': {'max': 'h', 'min': 'h', 'at': 8}}]
+Most: 0.9655172413651606
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'ltex': {'max': 'n', 'min': 'n', 'at': 21}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}]
+Most: 0.823529411751384
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'cplx': {'max': 'h', 'min': 'h', 'at': 10}}]
+Most: 0.9032258064377733
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'stor': {'max': 'xh', 'min': 'xh', 'at': 14}}]
+Most: 0.9333333333193334
+Using rule :  {'stor': {'max': 'xh', 'min': 'xh', 'at': 14}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'n', 'min': 'n', 'at': 9}}, {'data': {'max': 'n', 'min': 'n', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}]
+Most: 0.9333333333193334
+Using rule :  {'data': {'max': 'n', 'min': 'n', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'vh', 'min': 'vh', 'at': 9}}]
+Most: 0.9999999999833333
+Using rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'vh', 'min': 'vh', 'at': 9}}, {'data': {'max': 'vh', 'min': 'vh', 'at': 9}, 'rely': {'max': 'n', 'min': 'n', 'at': 8}}]
+Most: 0.8571428571306122
+Using rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}]
+Most: 0.8571428571270409
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.9032258064377733
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'plex': {'max': 'n', 'min': 'n', 'at': 20}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}]
+Most: 0.709359605899886
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'data': {'max': 'l', 'min': 'l', 'at': 9}}]
+Most: 0.9333333333193334
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'cplx': {'max': 'h', 'min': 'h', 'at': 10}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'cplx': {'max': 'h', 'min': 'h', 'at': 10}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'cplx': {'max': 'h', 'min': 'h', 'at': 10}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}, 'ltex': {'max': 'h', 'min': 'h', 'at': 21}}]
+Most: 0.9999999999857143
+Using rule :  {'stor': {'max': 'n', 'min': 'n', 'at': 14}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}, 'ltex': {'max': 'l', 'min': 'l', 'at': 21}}]
+Most: 0.5714285714204081
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'vh', 'min': 'vh', 'at': 9}}]
+Most: 0.9999999999833333
+Using rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'apex': {'max': 'vh', 'min': 'vh', 'at': 19}}]
+Most: 0.9999999999857143
+Using rule :  {'apex': {'max': 'vh', 'min': 'vh', 'at': 19}}
+Using second rule :  {'cplx': {'max': 'h', 'min': 'h', 'at': 10}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'apex': {'max': 'n', 'min': 'n', 'at': 19}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.8888888888728396
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+T test for sway - significance -  [-0.32110001 -0.62766886 -0.33326383 -0.44890203]
+T test for sway - confidence -  [0.23716811 0.22220654 0.32211508 0.26148876]
+T test for xpln - significance -  [-0.38931413 -0.33332601 -0.16626278 -0.19400474]
+T test for xpln - confidence -  [0.51291031 0.62331927 0.66187542 0.60323943]
+%%%%%%%%%%%%%%%
+
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.9599999999835199
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}]
+Most: 0.9032258064377733
+Using rule :  {'stor': {'max': 'n', 'min': 'n', 'at': 14}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'data': {'max': 'h', 'min': 'h', 'at': 9}}]
+Most: 0.6666666666555555
+Using rule :  {'stor': {'max': 'n', 'min': 'n', 'at': 14}}
+Using second rule :  {'cplx': {'max': 'h', 'min': 'h', 'at': 10}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'cplx': {'max': 'h', 'min': 'h', 'at': 10}}]
+Most: 0.7567567567439738
+Using rule :  {'stor': {'max': 'n', 'min': 'n', 'at': 14}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'apex': {'max': 'n', 'min': 'n', 'at': 19}}, {'apex': {'max': 'n', 'min': 'n', 'at': 19}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.9655172413651606
+Using rule :  {'apex': {'max': 'n', 'min': 'n', 'at': 19}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'time': {'max': 'n', 'min': 'n', 'at': 13}}, {'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}]
+Most: 0.8571428571270409
+Using rule :  {'stor': {'max': 'n', 'min': 'n', 'at': 14}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}, 'plex': {'max': 'n', 'min': 'n', 'at': 20}, 'time': {'max': 'n', 'min': 'n', 'at': 13}, 'cplx': {'max': 'h', 'min': 'h', 'at': 10}, 'ltex': {'max': 'h', 'min': 'h', 'at': 21}}]
+Most: 0.9999999999833333
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'cplx': {'max': 'vh', 'min': 'vh', 'at': 10}}, {'cplx': {'max': 'vh', 'min': 'vh', 'at': 10}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}]
+Most: 0.8571428571306122
+Using rule :  {'cplx': {'max': 'vh', 'min': 'vh', 'at': 10}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'n', 'min': 'n', 'at': 9}}, {'data': {'max': 'n', 'min': 'n', 'at': 9}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}]
+Most: 0.9032258064377733
+Using rule :  {'data': {'max': 'n', 'min': 'n', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.9333333333193334
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'data': {'max': 'l', 'min': 'l', 'at': 9}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'data': {'max': 'l', 'min': 'l', 'at': 9}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'stor': {'max': 'n', 'min': 'n', 'at': 14}}]
+Most: 0.823529411751384
+Using rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'sced': {'max': 'n', 'min': 'n', 'at': 24}}, {'sced': {'max': 'n', 'min': 'n', 'at': 24}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}, {'sced': {'max': 'n', 'min': 'n', 'at': 24}, 'data': {'max': 'n', 'min': 'n', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}]
+Most: 0.6233766233658964
+Using rule :  {'sced': {'max': 'n', 'min': 'n', 'at': 24}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  5
+number of rest :  20
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'cplx': {'max': 'h', 'min': 'h', 'at': 10}}, {'cplx': {'max': 'h', 'min': 'h', 'at': 10}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}, 'pvol': {'max': 'l', 'min': 'l', 'at': 15}}, {'cplx': {'max': 'h', 'min': 'h', 'at': 10}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}, 'pvol': {'max': 'l', 'min': 'l', 'at': 15}, 'prec': {'max': 'h', 'min': 'h', 'at': 3}, 'flex': {'max': 'h', 'min': 'h', 'at': 4}, 'resl': {'max': 'h', 'min': 'h', 'at': 5}, 'team': {'max': 'vh', 'min': 'vh', 'at': 6}, 'ruse': {'max': 'n', 'min': 'n', 'at': 11}, 'docu': {'max': 'n', 'min': 'n', 'at': 12}, 'pcon': {'max': 'n', 'min': 'n', 'at': 18}, 'site': {'max': 'n', 'min': 'n', 'at': 23}, 'sced': {'max': 'n', 'min': 'n', 'at': 24}}]
+Most: 0.6736842105112465
+Using rule :  {'cplx': {'max': 'h', 'min': 'h', 'at': 10}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'plex': {'max': 'l', 'min': 'l', 'at': 20}}]
+Most: 0.9655172413651606
+Using rule :  {'plex': {'max': 'l', 'min': 'l', 'at': 20}}
+Using second rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  6
+number of rest :  24
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}]
+Most: 0.7999999999846666
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  13
+number of rest improved :  52
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.8484848484713499
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'stor': {'max': 'n', 'min': 'n', 'at': 14}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'stor': {'max': 'vh', 'min': 'vh', 'at': 14}}, {'stor': {'max': 'vh', 'min': 'vh', 'at': 14}, 'plex': {'max': 'h', 'min': 'h', 'at': 20}}]
+Most: 0.9655172413651606
+Using rule :  {'stor': {'max': 'vh', 'min': 'vh', 'at': 14}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'ltex': {'max': 'n', 'min': 'n', 'at': 21}}, {'ltex': {'max': 'n', 'min': 'n', 'at': 21}, 'data': {'max': 'n', 'min': 'n', 'at': 9}}]
+Most: 0.9999999999857143
+Using rule :  {'ltex': {'max': 'n', 'min': 'n', 'at': 21}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  5
+number of rest :  20
+number of best improved :  12
+number of rest improved :  48
+Rule : [{'sced': {'max': 'l', 'min': 'l', 'at': 24}}, {'sced': {'max': 'l', 'min': 'l', 'at': 24}, 'apex': {'max': 'n', 'min': 'n', 'at': 19}}]
+Most: 0.8695652173722117
+Using rule :  {'sced': {'max': 'l', 'min': 'l', 'at': 24}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  7
+number of rest :  28
+number of best improved :  10
+number of rest improved :  40
+Rule : [{'rely': {'max': 'n', 'min': 'n', 'at': 8}}, {'rely': {'max': 'n', 'min': 'n', 'at': 8}, 'apex': {'max': 'h', 'min': 'h', 'at': 19}}, {'rely': {'max': 'n', 'min': 'n', 'at': 8}, 'apex': {'max': 'h', 'min': 'h', 'at': 19}, 'ltex': {'max': 'h', 'min': 'h', 'at': 21}}, {'rely': {'max': 'n', 'min': 'n', 'at': 8}, 'apex': {'max': 'h', 'min': 'h', 'at': 19}, 'ltex': {'max': 'h', 'min': 'h', 'at': 21}, 'data': {'max': 'l', 'min': 'l', 'at': 9}}]
+Most: 0.8571428571306122
+Using rule :  {'rely': {'max': 'n', 'min': 'n', 'at': 8}}
+Using second rule :  {'data': {'max': 'l', 'min': 'l', 'at': 9}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+T test for sway - significance -  [-0.56968119 -0.63332291 -0.48954842 -0.56001152]
+T test for sway - confidence -  [0.21405578 0.22009065 0.28669191 0.23250843]
+T test for xpln - significance -  [-0.70500178 -0.23029454 -0.39838709 -0.31770201]
+T test for xpln - confidence -  [0.42112684 0.66872277 0.65454236 0.62271946]
+%%%%%%%%%%%%%%%
+
+y cols :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+values : without sort | after sort
+[16.3, 82.0, 810.0, 14.8]  <>  [16.3, 82.0, 810.0, 14.8]
+[16.3, 82.0, 810.0, 14.8]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[16.3, 82.0, 810.0, 14.8]  <>  [16.3, 82.0, 810.0, 14.8]
+[8.0, 42.0, 420.0, 12.5]  <>  [12.8, 62.0, 636.0, 13.6]
+[16.3, 82.0, 810.0, 14.8]  <>  [16.3, 82.0, 810.0, 14.8]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[2.2, 8.4, 69.0, 6.6]  <>  [16.3, 82.0, 810.0, 14.8]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[16.3, 82.0, 810.0, 14.8]  <>  [12.8, 62.0, 636.0, 13.6]
+[16.3, 82.0, 810.0, 14.8]  <>  [16.0, 114.0, 887.0, 16.4]
+[16.3, 82.0, 810.0, 14.8]  <>  [16.3, 82.0, 810.0, 14.8]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [12.8, 62.0, 636.0, 13.6]
+[12.8, 62.0, 636.0, 13.6]  <>  [2.2, 8.4, 69.0, 6.6]
+
+s values :  [-0.0489944  -0.274129   -0.11103721 -0.13120672]
+p values :  [0.96118038 0.7854702  0.91217125 0.89630398]

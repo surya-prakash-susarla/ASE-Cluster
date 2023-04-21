@@ -1,0 +1,228 @@
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/nasa93dem.csv
+original shape of cells :  (93, 29)
+x cols :  ['prec', 'flex', 'resl', 'team', 'pmat', 'rely', 'data', 'cplx', 'ruse', 'docu', 'time', 'stor', 'pvol', 'acap', 'pcap', 'pcon', 'apex', 'plex', 'ltex', 'tool', 'site', 'sced']
+len of x cols :  22
+y cols :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+shape of cells after deletion :  (93, 4)
+      0      1      2     3
+0  25.9  117.6  808.0  15.3
+1  24.6  117.6  767.0  15.0
+2   7.7   31.2  240.0  10.1
+3   8.2   36.0  256.0  10.4
+4   9.7   25.2  302.0  11.0
+          0         1         2         3
+0  1.000000  0.594941  0.963195  0.896749
+1  0.594941  1.000000  0.578790  0.741530
+2  0.963195  0.578790  1.000000  0.871345
+3  0.896749  0.741530  0.871345  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+total number of rows :  93
+number of best :  5
+number of rest :  20
+number of best improved :  11
+number of rest improved :  44
+Rule : [{'rely': {'max': 'h', 'min': 'h', 'at': 8}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}}, {'rely': {'max': 'h', 'min': 'h', 'at': 8}, 'data': {'max': 'l', 'min': 'l', 'at': 9}, 'tool': {'max': 'n', 'min': 'n', 'at': 22}, 'sced': {'max': 'l', 'min': 'l', 'at': 24}}]
+Most: 0.7111111110957037
+Using rule :  {'rely': {'max': 'h', 'min': 'h', 'at': 8}}
+Using second rule :  {'data': {'max': 'vh', 'min': 'vh', 'at': 9}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['Kloc+', 'Effort-', 'Defects-', 'Months-']
+T test for sway - significance -  [2.5223385  2.52670306 2.47533166 3.05229578]
+T test for sway - confidence -  [0.02439006 0.02418487 0.02670846 0.00861048]
+T test for xpln - significance -  [-0.93287539 -0.51103143 -0.49479588 -0.29951662]
+T test for xpln - confidence -  [0.3555533  0.61167169 0.62300152 0.76583905]
+%%%%%%%%%%%%%%%
+
+&Defects- &Effort- &Kloc+ &Months- 
+all  & 3761.76 & 624.41 & 94.02 & 24.18
+sway  & 193.4 & 23.68 & 5.32 & 9.56
+sway_1  & 1004.82 & 111.91 & 21.82 & 15.59
+xpln  & 3011.36 & 483.55 & 75.81 & 22.25
+xpln_1  & 2317.38 & 365.13 & 44.39 & 21.04
+ztop  & 474.6 & 65.52 & 15.22 & 12.36
+.
+&Defects- &Effort- &Kloc+ &Months- 
+all to all &=&=&=&=
+all to sway &≠&≠&≠&≠
+all to sway_1 &≠&≠&≠&≠
+all to xpln &=&=&=&=
+all to xpln_1 &=&=&≠&≠
+all to ztop &≠&≠&≠&≠
+ rule size mu 3.0 std 0.0
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/healthCloseIsses12mths0001-hard.csv
+original shape of cells :  (10000, 8)
+x cols :  ['N_estimators', 'criterion', 'Min_sample_leaves', 'Min_impurity_decrease', 'Max_depth']
+len of x cols :  5
+y cols :  ['MRE-', 'ACC+', 'PRED40+']
+shape of cells after deletion :  (10000, 3)
+       0      1     2
+0   75.4   2.19   0.0
+1  73.68   7.55  25.0
+2   75.4  11.58  37.5
+3  72.57   7.89  25.0
+4  100.0    0.0  37.5
+          0         1         2
+0  1.000000 -0.952258  0.290704
+1 -0.952258  1.000000 -0.273830
+2  0.290704 -0.273830  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  137
+number of rest improved :  548
+Rule : [{'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}]
+Most: 0.6664815329065856
+Using rule :  {'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['MRE-', 'ACC+', 'PRED40+']
+T test for sway - significance -  [ 6.05879124 -6.03911561  3.58158485]
+T test for sway - confidence -  [6.14103296e-09 6.81537877e-09 4.23112989e-04]
+T test for xpln - significance -  [ 0.79643029 -1.2660384  -1.33707643]
+T test for xpln - confidence -  [0.42580859 0.20554084 0.1812405 ]
+%%%%%%%%%%%%%%%
+
+&ACC+ &MRE- &PRED40+ 
+all  & 5.15 & 82.32 & 22.1
+sway  & 7.52 & 73.78 & 15.71
+sway_1  & 4.98 & 82.65 & 22.17
+xpln  & 5.24 & 82.17 & 22.52
+xpln_1  & 5.11 & 82.45 & 21.99
+ztop  & 5.21 & 81.83 & 22.12
+.
+&ACC+ &MRE- &PRED40+ 
+all to all &=&=&=
+all to sway &≠&≠&≠
+all to sway_1 &=&=&=
+all to xpln &=&=&≠
+all to xpln_1 &≠&=&=
+all to ztop &=&=&=
+ rule size mu 1.0 std 0.0
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/SSM.csv
+original shape of cells :  (239360, 15)
+x cols :  ['f', 'sMOOTHER', 'cOLORGS', 'rELAXPARAMETER', 'v', 'jACOBI', 'lINE', 'zEBRALINE', 'cYCLE', 'ALPHA', 'BETA', 'PRESMOOTHING', 'POSTSMOOTHING']
+len of x cols :  13
+y cols :  ['NUMBERITERATIONS-', 'TIMETOSOLUTION-']
+shape of cells after deletion :  (239360, 2)
+       0         1
+0  501.0  2741.066
+1  254.0  1395.957
+2  501.0  2775.228
+3  501.0  2784.687
+4   11.0    80.616
+          0         1
+0  1.000000  0.915088
+1  0.915088  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  239360
+number of best :  469
+number of rest :  1876
+number of best improved :  648
+number of rest improved :  2592
+Rule : [{'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}, {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}, 'f': {'max': 1.0, 'min': 1.0, 'at': 0}}]
+Most: 0.8836552048985233
+Using rule :  {'lINE': {'max': 1.0, 'min': 1.0, 'at': 6}}
+Using second rule :  {'BETA': {'max': 10000000000, 'min': 80.0, 'at': 10}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['NUMBERITERATIONS-', 'TIMETOSOLUTION-']
+T test for sway - significance -  [12.76462001 16.88169033]
+T test for sway - confidence -  [6.30715681e-35 4.10372320e-57]
+T test for xpln - significance -  [79.02752559 69.50497413]
+T test for xpln - confidence -  [0. 0.]
+%%%%%%%%%%%%%%%
+
+&NUMBERITERATIONS- &TIMETOSOLUTION- 
+all  & 30.94 & 506.04
+sway  & 4.65 & 100.26
+sway_1  & 8.17 & 176.32
+xpln  & 9.69 & 186.61
+xpln_1  & 47.8 & 761.07
+ztop  & 160.04 & 1800.81
+.
+&NUMBERITERATIONS- &TIMETOSOLUTION- 
+all to all &=&=
+all to sway &≠&≠
+all to sway_1 &≠&≠
+all to xpln &≠&≠
+all to xpln_1 &≠&≠
+all to ztop &≠&≠
+ rule size mu 2.0 std 0.0
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/SSN.csv
+original shape of cells :  (53662, 19)
+x cols :  ['no_mbtree', 'no_asm', 'no_cabac', 'no_scenecut', 'Aq_strength', 'Bframes', 'Qcomp', 'Qp', 'Ref', 'Rc_lookahead', 'B_bias', 'Threads', 'Keyint', 'Crf', 'Scenecut', 'Seek', 'Ipratio']
+len of x cols :  17
+y cols :  ['PSNR-', 'Energy-']
+shape of cells after deletion :  (53662, 2)
+             0            1
+0  48.13708333  1651.960332
+1       48.139  3323.151244
+2       48.139  3134.942256
+3       48.148  8077.788092
+4       44.414  6506.946809
+          0         1
+0  1.000000  0.045113
+1  0.045113  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  260
+number of rest improved :  1040
