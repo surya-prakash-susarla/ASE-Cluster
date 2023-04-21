@@ -1,0 +1,885 @@
+files :  [PosixPath('../etc/data/nasa93dem.csv'), PosixPath('../etc/data/healthCloseIsses12mths0001-hard.csv'), PosixPath('../etc/data/SSM.csv'), PosixPath('../etc/data/SSN.csv'), PosixPath('../etc/data/auto93.csv'), PosixPath('../etc/data/auto2.csv'), PosixPath('../etc/data/coc10000.csv'), PosixPath('../etc/data/healthCloseIsses12mths0011-easy.csv'), PosixPath('../etc/data/coc1000.csv'), PosixPath('../etc/data/pom.csv'), PosixPath('../etc/data/china.csv')]
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/healthCloseIsses12mths0001-hard.csv
+original shape of cells :  (10000, 8)
+x cols :  ['N_estimators', 'criterion', 'Min_sample_leaves', 'Min_impurity_decrease', 'Max_depth']
+len of x cols :  5
+y cols :  ['MRE-', 'ACC+', 'PRED40+']
+shape of cells after deletion :  (10000, 3)
+       0      1     2
+0   75.4   2.19   0.0
+1  73.68   7.55  25.0
+2   75.4  11.58  37.5
+3  72.57   7.89  25.0
+4  100.0    0.0  37.5
+          0         1         2
+0  1.000000 -0.952258  0.290704
+1 -0.952258  1.000000 -0.273830
+2  0.290704 -0.273830  1.000000
+All possible permutations :  1
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  165
+number of rest improved :  660
+Rule : [{'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}]
+Most: 0.4017248574204886
+Using rule :  {'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  210
+number of rest improved :  840
+Rule : [{'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}]
+Most: 0.4185470555855407
+Using rule :  {'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  145
+number of rest improved :  580
+Rule : [{'Min_sample_leaves': {'max': 19.0, 'min': 18.0, 'at': 5}}]
+Most: 0.1952983725132887
+Using rule :  {'Min_sample_leaves': {'max': 19.0, 'min': 18.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  210
+number of rest improved :  840
+Rule : [{'Min_sample_leaves': {'max': 17.0, 'min': 15.0, 'at': 5}}]
+Most: 0.23225806451578956
+Using rule :  {'Min_sample_leaves': {'max': 17.0, 'min': 15.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  134
+number of rest improved :  536
+Rule : [{'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}]
+Most: 0.2070855353294854
+Using rule :  {'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  112
+number of rest improved :  448
+Rule : [{'Max_depth': {'max': 19.0, 'min': 18.0, 'at': 7}}]
+Most: 0.06613278222670928
+Using rule :  {'Max_depth': {'max': 19.0, 'min': 18.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  211
+number of rest improved :  844
+Rule : [{'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}]
+Most: 0.4188481675386797
+Using rule :  {'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  123
+number of rest improved :  492
+Rule : [{'N_estimators': {'max': 40.0, 'min': 10.0, 'at': 3}}]
+Most: 0.6329090909082157
+Using rule :  {'N_estimators': {'max': 40.0, 'min': 10.0, 'at': 3}}
+Using second rule :  {'Max_depth': {'max': 17.0, 'min': 15.0, 'at': 7}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  130
+number of rest improved :  520
+Rule : [{'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}]
+Most: 0.42016574585577393
+Using rule :  {'N_estimators': {'max': 30.0, 'min': 10.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  138
+number of rest improved :  552
+Rule : [{'Max_depth': {'max': 18.0, 'min': 15.0, 'at': 7}}]
+Most: 0.19443037974652289
+Using rule :  {'Max_depth': {'max': 18.0, 'min': 15.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  132
+number of rest improved :  528
+Rule : [{'Max_depth': {'max': 3.0, 'min': -10000000000, 'at': 7}}]
+Most: 0.29064088507882935
+Using rule :  {'Max_depth': {'max': 3.0, 'min': -10000000000, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  139
+number of rest improved :  556
+Rule : [{'Max_depth': {'max': 17.0, 'min': 15.0, 'at': 7}}]
+Most: 0.14931542237124784
+Using rule :  {'Max_depth': {'max': 17.0, 'min': 15.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  235
+number of rest improved :  940
+Rule : [{'Min_sample_leaves': {'max': 18.0, 'min': 17.0, 'at': 5}}, {'Min_sample_leaves': {'max': 19.0, 'min': 18.0, 'at': 5}, 'Max_depth': {'max': 19.0, 'min': 17.0, 'at': 7}}]
+Most: 0.12499999999984375
+Using rule :  {'Min_sample_leaves': {'max': 18.0, 'min': 17.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 40.0, 'min': -10000000000, 'at': 3}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  117
+number of rest improved :  468
+Rule : [{'Min_impurity_decrease': {'max': 0.75, 'min': -10000000000, 'at': 6}}]
+Most: 0.21891288160802574
+Using rule :  {'Min_impurity_decrease': {'max': 0.75, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'Max_depth': {'max': 3.0, 'min': -10000000000, 'at': 7}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  128
+number of rest improved :  512
+Rule : [{'N_estimators': {'max': 10000000000, 'min': 190.0, 'at': 3}}]
+Most: 0.4721951219505666
+Using rule :  {'N_estimators': {'max': 10000000000, 'min': 190.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  127
+number of rest improved :  508
+Rule : [{'N_estimators': {'max': 50.0, 'min': 30.0, 'at': 3}}]
+Most: 0.18411967779028313
+Using rule :  {'N_estimators': {'max': 50.0, 'min': 30.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  135
+number of rest improved :  540
+Rule : [{'N_estimators': {'max': 30.0, 'min': -10000000000, 'at': 3}}]
+Most: 0.19106759015973276
+Using rule :  {'N_estimators': {'max': 30.0, 'min': -10000000000, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  117
+number of rest improved :  468
+Rule : [{'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}]
+Most: 0.306793498613877
+Using rule :  {'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  137
+number of rest improved :  548
+Rule : [{'Min_sample_leaves': {'max': 8.0, 'min': 5.0, 'at': 5}}]
+Most: 0.3499999999994969
+Using rule :  {'Min_sample_leaves': {'max': 8.0, 'min': 5.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  132
+number of rest improved :  528
+Rule : [{'Min_impurity_decrease': {'max': 1.5, 'min': 0.75, 'at': 6}}]
+Most: 0.34776702326321524
+Using rule :  {'Min_impurity_decrease': {'max': 1.5, 'min': 0.75, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['MRE-', 'ACC+', 'PRED40+']
+T test for sway - significance -  [ 6.24677079 -5.80003335  1.9904577 ]
+T test for sway - confidence -  [4.18046994e-08 1.88843715e-07 1.73647037e-01]
+T test for xpln - significance -  [ 0.01100083 -0.80026849  0.977955  ]
+T test for xpln - confidence -  [0.52109693 0.48967918 0.33016158]
+%%%%%%%%%%%%%%%
+
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  26
+number of rest improved :  104
+Rule : [{'Min_sample_leaves': {'max': 8.0, 'min': 5.0, 'at': 5}}]
+Most: 0.5240641711176
+Using rule :  {'Min_sample_leaves': {'max': 8.0, 'min': 5.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  27
+number of rest improved :  108
+Rule : [{'Min_sample_leaves': {'max': 4.0, 'min': -10000000000, 'at': 5}}]
+Most: 0.37878787878400483
+Using rule :  {'Min_sample_leaves': {'max': 4.0, 'min': -10000000000, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  10
+number of rest :  40
+number of best improved :  21
+number of rest improved :  84
+Rule : [{'Max_depth': {'max': 10.0, 'min': 8.0, 'at': 7}}]
+Most: 0.4166666666619792
+Using rule :  {'Max_depth': {'max': 10.0, 'min': 8.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  16
+number of rest improved :  64
+Rule : [{'Max_depth': {'max': 10.0, 'min': 8.0, 'at': 7}}]
+Most: 0.5568181818126453
+Using rule :  {'Max_depth': {'max': 10.0, 'min': 8.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  10
+number of rest :  40
+number of best improved :  19
+number of rest improved :  76
+Rule : [{'Min_impurity_decrease': {'max': 3.5, 'min': 2.75, 'at': 6}}]
+Most: 0.13333333333166666
+Using rule :  {'Min_impurity_decrease': {'max': 3.5, 'min': 2.75, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  32
+number of rest improved :  128
+Rule : [{'N_estimators': {'max': 130.0, 'min': 100.0, 'at': 3}}]
+Most: 0.4363636363590745
+Using rule :  {'N_estimators': {'max': 130.0, 'min': 100.0, 'at': 3}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  22
+number of rest improved :  88
+Rule : [{'Min_impurity_decrease': {'max': 1.5, 'min': 0.75, 'at': 6}}]
+Most: 0.6844919786031285
+Using rule :  {'Min_impurity_decrease': {'max': 1.5, 'min': 0.75, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 60.0, 'at': 3}, 'Min_sample_leaves': {'max': 15.0, 'min': -10000000000, 'at': 5}, 'Max_depth': {'max': 14.0, 'min': 13.0, 'at': 7}, 'Min_impurity_decrease': {'max': 10000000000, 'min': 8.75, 'at': 6}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  28
+number of rest improved :  112
+Rule : [{'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}, 'Min_impurity_decrease': {'max': 8.75, 'min': 8.25, 'at': 6}}]
+Most: 0.18181818181652892
+Using rule :  {'Max_depth': {'max': 3.0, 'min': 1.0, 'at': 7}, 'Min_impurity_decrease': {'max': 8.75, 'min': 8.25, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+Evaluation :  10
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  17
+number of rest improved :  68
+Rule : [{'Min_sample_leaves': {'max': 12.0, 'min': 6.0, 'at': 5}}]
+Most: 0.8148148148063785
+Using rule :  {'Min_sample_leaves': {'max': 12.0, 'min': 6.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  19
+number of rest improved :  76
+Rule : [{'Max_depth': {'max': 19.0, 'min': 16.0, 'at': 7}}, {'Max_depth': {'max': 10000000000, 'min': 19.0, 'at': 7}}]
+Most: 0.7363636363564401
+Using rule :  {'Max_depth': {'max': 19.0, 'min': 16.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  10
+number of rest :  40
+number of best improved :  20
+number of rest improved :  80
+Rule : [{'Max_depth': {'max': 10000000000, 'min': 15.0, 'at': 7}}]
+Most: 0.3448275862026457
+Using rule :  {'Max_depth': {'max': 10000000000, 'min': 15.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  31
+number of rest improved :  124
+Rule : [{'Min_sample_leaves': {'max': 10000000000, 'min': 19.0, 'at': 5}}]
+Most: 0.6124401913813328
+Using rule :  {'Min_sample_leaves': {'max': 10000000000, 'min': 19.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  30
+number of rest improved :  120
+Rule : [{'Min_sample_leaves': {'max': 13.0, 'min': 10.0, 'at': 5}}]
+Most: 0.4363636363590745
+Using rule :  {'Min_sample_leaves': {'max': 13.0, 'min': 10.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  10
+number of rest :  40
+number of best improved :  20
+number of rest improved :  80
+Rule : [{'Min_impurity_decrease': {'max': 4.75, 'min': 3.5, 'at': 6}}]
+Most: 0.5142857142800205
+Using rule :  {'Min_impurity_decrease': {'max': 4.75, 'min': 3.5, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  9
+number of rest :  36
+number of best improved :  21
+number of rest improved :  84
+Rule : [{'Min_sample_leaves': {'max': 8.0, 'min': 6.0, 'at': 5}}]
+Most: 0.42735042734485723
+Using rule :  {'Min_sample_leaves': {'max': 8.0, 'min': 6.0, 'at': 5}}
+Using second rule :  {'Max_depth': {'max': 14.0, 'min': 12.0, 'at': 7}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  17
+number of rest improved :  68
+Rule : [{'Min_impurity_decrease': {'max': 7.5, 'min': 6.75, 'at': 6}}]
+Most: 0.5747800586454218
+Using rule :  {'Min_impurity_decrease': {'max': 7.5, 'min': 6.75, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 60.0, 'at': 3}, 'Max_depth': {'max': 10000000000, 'min': 18.0, 'at': 7}, 'Min_impurity_decrease': {'max': 7.5, 'min': 6.75, 'at': 6}, 'Min_sample_leaves': {'max': 10000000000, 'min': 12.0, 'at': 5}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  20
+number of rest improved :  80
+Rule : [{'Min_impurity_decrease': {'max': 5.5, 'min': 4.75, 'at': 6}}]
+Most: 0.17224880382575267
+Using rule :  {'Min_impurity_decrease': {'max': 5.5, 'min': 4.75, 'at': 6}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  28
+number of rest improved :  112
+Rule : [{'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}]
+Most: 0.5240641711176
+Using rule :  {'Max_depth': {'max': 4.0, 'min': 1.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  35
+number of rest improved :  140
+Rule : [{'Min_sample_leaves': {'max': 17.0, 'min': 14.0, 'at': 5}}]
+Most: 0.3496503496466209
+Using rule :  {'Min_sample_leaves': {'max': 17.0, 'min': 14.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  10000
+number of best :  11
+number of rest :  44
+number of best improved :  25
+number of rest improved :  100
+Rule : [{'Min_sample_leaves': {'max': 19.0, 'min': 18.0, 'at': 5}}, {'Min_sample_leaves': {'max': 19.0, 'min': 18.0, 'at': 5}, 'Max_depth': {'max': 14.0, 'min': 10.0, 'at': 7}}]
+Most: 0.25174825174583115
+Using rule :  {'Min_sample_leaves': {'max': 19.0, 'min': 18.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['MRE-', 'ACC+', 'PRED40+']
+T test for sway - significance -  [ 2.42422913 -2.36441003  0.72953458]
+T test for sway - confidence -  [0.04170972 0.06783694 0.46606335]
+T test for xpln - significance -  [ 0.0070043  -0.01020039  0.18209695]
+T test for xpln - confidence -  [0.48063525 0.39624647 0.44385177]
+%%%%%%%%%%%%%%%
+
+y cols :  ['MRE-', 'ACC+', 'PRED40+']
+values : default | custom 
+[73.48, 7.61, 25.0]  <>  [74.89, 7.18, 25.0]
+[74.01, 7.45, 25.0]  <>  [72.47, 7.92, 25.0]
+[74.31, 7.36, 25.0]  <>  [72.55, 7.9, 25.0]
+[74.01, 7.45, 25.0]  <>  [71.59, 8.2, 25.0]
+[73.45, 7.62, 25.0]  <>  [74.41, 7.32, 25.0]
+[100.0, 0.0, 37.5]  <>  [73.31, 7.66, 25.0]
+[74.34, 7.34, 25.0]  <>  [100.0, 0.0, 37.5]
+[75.26, 7.06, 0.0]  <>  [72.2, 8.01, 25.0]
+[73.1, 7.73, 25.0]  <>  [73.45, 7.62, 25.0]
+[72.2, 8.01, 25.0]  <>  [72.49, 7.92, 25.0]
+[100.0, 0.0, 37.5]  <>  [71.59, 8.2, 25.0]
+[76.12, 6.8, 0.0]  <>  [73.52, 7.6, 25.0]
+[69.44, 8.87, 25.0]  <>  [73.51, 7.6, 25.0]
+[100.0, 0.0, 37.5]  <>  [71.7, 8.16, 25.0]
+[100.0, 0.0, 37.5]  <>  [100.0, 0.0, 37.5]
+[69.18, 10.38, 25.0]  <>  [74.45, 7.31, 25.0]
+[74.52, 7.29, 25.0]  <>  [70.56, 8.94, 25.0]
+[72.56, 8.21, 25.0]  <>  [74.81, 7.2, 25.0]
+[72.9, 7.79, 25.0]  <>  [73.21, 7.69, 25.0]
+[100.0, 0.0, 37.5]  <>  [73.41, 7.63, 25.0]
+
+s values :  [ 1.29521081 -1.20163409 -0.25378491]
+p values :  [0.20306137 0.23694097 0.8010299 ]
+Default configuration : 
+entropy :  -2
+rest :  4
+min :  0.5
+Custom configuration : 
+entropy :  -1.75
+rest :  4
+min :  0.3

@@ -1,0 +1,433 @@
+files :  [PosixPath('../etc/data/nasa93dem.csv'), PosixPath('../etc/data/healthCloseIsses12mths0001-hard.csv'), PosixPath('../etc/data/SSM.csv'), PosixPath('../etc/data/SSN.csv'), PosixPath('../etc/data/auto93.csv'), PosixPath('../etc/data/auto2.csv'), PosixPath('../etc/data/coc10000.csv'), PosixPath('../etc/data/healthCloseIsses12mths0011-easy.csv'), PosixPath('../etc/data/coc1000.csv'), PosixPath('../etc/data/pom.csv'), PosixPath('../etc/data/china.csv')]
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/SSN.csv
+original shape of cells :  (53662, 19)
+x cols :  ['no_mbtree', 'no_asm', 'no_cabac', 'no_scenecut', 'Aq_strength', 'Bframes', 'Qcomp', 'Qp', 'Ref', 'Rc_lookahead', 'B_bias', 'Threads', 'Keyint', 'Crf', 'Scenecut', 'Seek', 'Ipratio']
+len of x cols :  17
+y cols :  ['PSNR-', 'Energy-']
+shape of cells after deletion :  (53662, 2)
+           0            1
+0  48.137083  1651.960332
+1  48.139000  3323.151244
+2  48.139000  3134.942256
+3  48.148000  8077.788092
+4  44.414000  6506.946809
+          0         1
+0  1.000000  0.045113
+1  0.045113  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  5500
+number of rest improved :  22000
+Rule : [{'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}]
+Most: 0.8131021194600617
+Using rule :  {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  5454
+number of rest improved :  21816
+Rule : [{'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'Threads': {'max': 10000000000, 'min': 63.0, 'at': 11}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'Threads': {'max': 10000000000, 'min': 63.0, 'at': 11}, 'Rc_lookahead': {'max': 10000000000, 'min': 120.0, 'at': 9}}]
+Most: 0.9525959367941149
+Using rule :  {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  2616
+number of rest improved :  10464
+Rule : [{'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'Ref': {'max': 10000000000, 'min': 4.0, 'at': 8}}]
+Most: 0.7929330603770576
+Using rule :  {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  53662
+number of best :  210
+number of rest :  840
+number of best improved :  1333
+number of rest improved :  5332
+Rule : [{'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}]
+Most: 0.7878702662162936
+Using rule :  {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  53662
+number of best :  210
+number of rest :  840
+number of best improved :  655
+number of rest improved :  2620
+Rule : [{'no_asm': {'max': 1.0, 'min': 1.0, 'at': 1}}]
+Most: 0.8187134502919549
+Using rule :  {'no_asm': {'max': 1.0, 'min': 1.0, 'at': 1}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  6
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  1300
+number of rest improved :  5200
+Rule : [{'Keyint': {'max': 277.0, 'min': -10000000000, 'at': 12}}, {'Keyint': {'max': 277.0, 'min': -10000000000, 'at': 12}, 'Bframes': {'max': 7.0, 'min': -10000000000, 'at': 5}}, {'Keyint': {'max': 277.0, 'min': -10000000000, 'at': 12}, 'Bframes': {'max': 7.0, 'min': -10000000000, 'at': 5}, 'Ref': {'max': 4.0, 'min': -10000000000, 'at': 8}}]
+Most: 0.9346622369873538
+Using rule :  {'Keyint': {'max': 277.0, 'min': -10000000000, 'at': 12}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  7
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  320
+number of rest improved :  1280
+Rule : [{'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}}, {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}, 'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}]
+Most: 0.9642663867884268
+Using rule :  {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  8
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  2641
+number of rest improved :  10564
+Rule : [{'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}, 'B_bias': {'max': 10000000000, 'min': 6.0, 'at': 10}}, {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}, 'B_bias': {'max': 10000000000, 'min': 6.0, 'at': 10}, 'Seek': {'max': 580.0, 'min': -10000000000, 'at': 15}}]
+Most: 0.9062798957561412
+Using rule :  {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  9
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  210
+number of rest :  840
+number of best improved :  311
+number of rest improved :  1244
+Rule : [{'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}, 'Seek': {'max': 627.0, 'min': -10000000000, 'at': 15}}, {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}, 'Seek': {'max': 627.0, 'min': -10000000000, 'at': 15}, 'Crf': {'max': 10000000000, 'min': -10000000000, 'at': 13}}]
+Most: 0.8722741433017256
+Using rule :  {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  10
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  210
+number of rest :  840
+number of best improved :  311
+number of rest improved :  1244
+Rule : [{'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}}, {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}, 'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}]
+Most: 0.916008733108661
+Using rule :  {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}}
+Using second rule :  {'Crf': {'max': 214000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  11
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  53662
+number of best :  210
+number of rest :  840
+number of best improved :  2649
+number of rest improved :  10596
+Rule : [{'no_asm': {'max': 1.0, 'min': 1.0, 'at': 1}}]
+Most: 0.7689141303816024
+Using rule :  {'no_asm': {'max': 1.0, 'min': 1.0, 'at': 1}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  12
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  5500
+number of rest improved :  22000
+Rule : [{'Ref': {'max': 4.0, 'min': -10000000000, 'at': 8}}, {'Ref': {'max': 4.0, 'min': -10000000000, 'at': 8}, 'Crf': {'max': 10000000000, 'min': -10000000000, 'at': 13}}, {'Ref': {'max': 4.0, 'min': -10000000000, 'at': 8}, 'Crf': {'max': 10000000000, 'min': -10000000000, 'at': 13}, 'Qcomp': {'max': 10000000000, 'min': -10000000000, 'at': 6}, 'Seek': {'max': 612.0, 'min': -10000000000, 'at': 15}}]
+Most: 0.6866974715932433
+Using rule :  {'Ref': {'max': 4.0, 'min': -10000000000, 'at': 8}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  13
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  2704
+number of rest improved :  10816
+Rule : [{'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'B_bias': {'max': 10000000000, 'min': -1.0, 'at': 10}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'B_bias': {'max': 10000000000, 'min': -1.0, 'at': 10}, 'Scenecut': {'max': 10000000000, 'min': 49.0, 'at': 14}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'B_bias': {'max': 10000000000, 'min': -1.0, 'at': 10}, 'Scenecut': {'max': 10000000000, 'min': 49.0, 'at': 14}, 'Seek': {'max': 580.0, 'min': -10000000000, 'at': 15}}]
+Most: 0.8645528206692036
+Using rule :  {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  14
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  53662
+number of best :  210
+number of rest :  840
+number of best improved :  1314
+number of rest improved :  5256
+Rule : [{'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}, {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}, 'Qp': {'max': 10000000000, 'min': 24.0, 'at': 7}}]
+Most: 0.8315174888848883
+Using rule :  {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  15
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+Evaluation :  10
+Evaluation :  11
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  325
+number of rest improved :  1300
+Rule : [{'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}}, {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}, 'Seek': {'max': 10000000000, 'min': 690.0, 'at': 15}}, {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}, 'Seek': {'max': 10000000000, 'min': 690.0, 'at': 15}, 'Qcomp': {'max': 10000000000, 'min': -10000000000, 'at': 6}, 'Aq_strength': {'max': 10000000000, 'min': -10000000000, 'at': 4}, 'Crf': {'max': 10000000000, 'min': -10000000000, 'at': 13}}]
+Most: 0.9082731075452187
+Using rule :  {'no_mbtree': {'max': 1.0, 'min': 1.0, 'at': 0}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  16
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  5342
+number of rest improved :  21368
+Rule : [{'no_asm': {'max': 1.0, 'min': 1.0, 'at': 1}}]
+Most: 0.7954759660693107
+Using rule :  {'no_asm': {'max': 1.0, 'min': 1.0, 'at': 1}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  17
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  5463
+number of rest improved :  21852
+Rule : [{'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}, {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}, 'Seek': {'max': 10000000000, 'min': 612.0, 'at': 15}}, {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}, 'Seek': {'max': 10000000000, 'min': 612.0, 'at': 15}, 'Scenecut': {'max': 49.0, 'min': -10000000000, 'at': 14}}]
+Most: 0.9529065930765047
+Using rule :  {'no_scenecut': {'max': 1.0, 'min': 1.0, 'at': 3}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  18
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+Evaluation :  8
+Evaluation :  9
+Evaluation :  10
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  321
+number of rest improved :  1284
+Rule : [{'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}]
+Most: 0.7977280127342713
+Using rule :  {'no_cabac': {'max': 1.0, 'min': 1.0, 'at': 2}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  19
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  5500
+number of rest improved :  22000
+Rule : [{'Crf': {'max': 10000000000, 'min': -10000000000, 'at': 13}}]
+Most: 0.38280492100050506
+Using rule :  {'Crf': {'max': 10000000000, 'min': -10000000000, 'at': 13}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+********************
+Iteration :  20
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  53662
+number of best :  211
+number of rest :  844
+number of best improved :  2606
+number of rest improved :  10424
+Rule : [{'Ref': {'max': 10000000000, 'min': 4.0, 'at': 8}}]
+Most: 0.5759508525449386
+Using rule :  {'Ref': {'max': 10000000000, 'min': 4.0, 'at': 8}}
+Using second rule :  {'Crf': {'max': 216000000000000.0, 'min': -10000000000, 'at': 13}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['PSNR-', 'Energy-']
+T test for sway - significance -  [  6.18085659 -17.51590885]
+T test for sway - confidence -  [0.01685254 0.00292874]
+T test for xpln - significance -  [ 1.28042651 -8.23809919]
+T test for xpln - confidence -  [0.07997243 0.04972556]
+%%%%%%%%%%%%%%%
+
+&Energy- &PSNR- 
+all  & 1658.0 & 44.53
+sway  & 1662.35 & 43.38
+sway_1  & 785.71 & 46.5
+xpln  & 1776.22 & 44.39
+xpln_1  & 1658.09 & 44.45
+ztop  & 6792.39 & 45.33
+.
+&Energy- &PSNR- 
+all to all &=&=
+all to sway &≠&≠
+all to sway_1 &≠&≠
+all to xpln &≠&=
+all to xpln_1 &=&=
+all to ztop &≠&≠
+ rule size mu 2.05 std 0.999
+<<<<<<<<<<===============>>>>>>>>>>
+
+

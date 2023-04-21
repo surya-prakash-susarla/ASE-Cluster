@@ -1,0 +1,536 @@
+files :  [PosixPath('../etc/data/nasa93dem.csv'), PosixPath('../etc/data/healthCloseIsses12mths0001-hard.csv'), PosixPath('../etc/data/SSM.csv'), PosixPath('../etc/data/SSN.csv'), PosixPath('../etc/data/auto93.csv'), PosixPath('../etc/data/auto2.csv'), PosixPath('../etc/data/coc10000.csv'), PosixPath('../etc/data/healthCloseIsses12mths0011-easy.csv'), PosixPath('../etc/data/coc1000.csv'), PosixPath('../etc/data/pom.csv'), PosixPath('../etc/data/china.csv')]
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/healthCloseIsses12mths0011-easy.csv
+          0         1         2
+0  1.000000 -0.848973 -0.991886
+1 -0.848973  1.000000  0.777114
+2 -0.991886  0.777114  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  110
+number of rest improved :  440
+Rule : [{'Max_depth': {'max': 17.0, 'min': 15.0, 'at': 7}}]
+Most: 0.10566868464485497
+Using rule :  {'Max_depth': {'max': 17.0, 'min': 15.0, 'at': 7}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 20.0, 'at': 3}, 'Max_depth': {'max': 12.0, 'min': 8.0, 'at': 7}, 'Min_sample_leaves': {'max': 10000000000, 'min': 18.0, 'at': 5}, 'Min_impurity_decrease': {'max': 4.75, 'min': 3.5, 'at': 6}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  146
+number of rest improved :  584
+Rule : [{'Min_impurity_decrease': {'max': 0.75, 'min': -10000000000, 'at': 6}}]
+Most: 0.2670940170936469
+Using rule :  {'Min_impurity_decrease': {'max': 0.75, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'Min_sample_leaves': {'max': 10.0, 'min': 8.0, 'at': 5}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  123
+number of rest improved :  492
+Rule : [{'Min_sample_leaves': {'max': 17.0, 'min': 15.0, 'at': 5}}, {'Min_sample_leaves': {'max': 15.0, 'min': 13.0, 'at': 5}}]
+Most: 0.2516753536854033
+Using rule :  {'Min_sample_leaves': {'max': 17.0, 'min': 15.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 10.0, 'at': 3}, 'Max_depth': {'max': 17.0, 'min': 15.0, 'at': 7}, 'Min_sample_leaves': {'max': 13.0, 'min': 12.0, 'at': 5}, 'Min_impurity_decrease': {'max': 2.25, 'min': 1.5, 'at': 6}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  231
+number of rest improved :  924
+Rule : [{'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}, {'Min_sample_leaves': {'max': 5.0, 'min': 3.0, 'at': 5}}]
+Most: 0.32033333333288083
+Using rule :  {'Min_sample_leaves': {'max': 3.0, 'min': 1.0, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 30.0, 'min': -10000000000, 'at': 3}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  140
+number of rest improved :  560
+Rule : [{'Min_sample_leaves': {'max': 3.0, 'min': -10000000000, 'at': 5}}]
+Most: 0.21607142857111503
+Using rule :  {'Min_sample_leaves': {'max': 3.0, 'min': -10000000000, 'at': 5}}
+Using second rule :  {'N_estimators': {'max': 10000000000, 'min': 100.0, 'at': 3}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['MRE-', 'ACC+', 'PRED40+']
+T test for sway - significance -  [  6.99342862 -12.94757764  -5.8450126 ]
+T test for sway - confidence -  [7.61439168e-07 1.20526297e-19 2.50152866e-04]
+T test for xpln - significance -  [-0.41546283 -0.26851065  0.40594635]
+T test for xpln - confidence -  [0.31301366 0.51078708 0.27884099]
+%%%%%%%%%%%%%%%
+
+&ACC+ &MRE- &PRED40+ 
+all  & -8.53 & 92.29 & 17.79
+sway  & -0.63 & 40.84 & 50.34
+sway_1  & -8.88 & 90.1 & 20.05
+xpln  & -8.42 & 92.38 & 17.74
+xpln_1  & -8.54 & 94.1 & 16.3
+ztop  & -8.75 & 93.82 & 16.75
+.
+&ACC+ &MRE- &PRED40+ 
+all to all &=&=&=
+all to sway &≠&≠&≠
+all to sway_1 &=&=&=
+all to xpln &=&=&=
+all to xpln_1 &=&=&=
+all to ztop &=&=&=
+ rule size mu 1.4 std 0.548
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/coc1000.csv
+          0         1         2  ...         5         6         7
+0  1.000000  0.073855  0.038210  ...  0.020289  0.000084  0.557129
+1  0.073855  1.000000  0.019992  ... -0.019310 -0.138699 -0.110894
+2  0.038210  0.019992  1.000000  ...  0.016229  0.140842  0.161865
+3 -0.007225 -0.010512 -0.047730  ...  0.008649  0.049140 -0.113741
+4  0.000339 -0.013115  0.016796  ... -0.006341 -0.138502 -0.164271
+5  0.020289 -0.019310  0.016229  ...  1.000000 -0.079803 -0.141743
+6  0.000084 -0.138699  0.140842  ... -0.079803  1.000000  0.373897
+7  0.557129 -0.110894  0.161865  ... -0.141743  0.373897  1.000000
+
+[8 rows x 8 columns]
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  1000
+number of best :  17
+number of rest :  68
+number of best improved :  38
+number of rest improved :  152
+Rule : [{'SITE': {'max': 4.0, 'min': 3.0, 'at': 18}}]
+Most: 0.1251564455558928
+Using rule :  {'SITE': {'max': 4.0, 'min': 3.0, 'at': 18}}
+Using second rule :  {'PCAP': {'max': 2.0, 'min': 1.0, 'at': 9}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  1000
+number of best :  17
+number of rest :  68
+number of best improved :  61
+number of rest improved :  244
+Rule : [{'TOOL': {'max': 2.0, 'min': 1.0, 'at': 22}}]
+Most: 0.11145510835829636
+Using rule :  {'TOOL': {'max': 2.0, 'min': 1.0, 'at': 22}}
+Using second rule :  {'TEAM': {'max': 10000000000, 'min': 4.0, 'at': 20}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  1000
+number of best :  17
+number of rest :  68
+number of best improved :  51
+number of rest improved :  204
+Rule : [{'DATA': {'max': 10000000000, 'min': 4.0, 'at': 5}}]
+Most: 0.6340557275495371
+Using rule :  {'DATA': {'max': 10000000000, 'min': 4.0, 'at': 5}}
+Using second rule :  {'TEAM': {'max': 2.0, 'min': -10000000000, 'at': 20}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+total number of rows :  1000
+number of best :  17
+number of rest :  68
+number of best improved :  32
+number of rest improved :  128
+rule generation failed
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+total number of rows :  1000
+number of best :  17
+number of rest :  68
+number of best improved :  49
+number of rest improved :  196
+rule generation failed
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['LOC+', 'AEXP-', 'PLEX-', 'RISK-', 'EFFORT-']
+T test for sway - significance -  [ 0.63909362  0.47835082 -0.74305064  1.475812    1.76023828]
+T test for sway - confidence -  [0.53289208 0.63560655 0.57691803 0.34000016 0.09558393]
+T test for xpln - significance -  [-0.16165159  0.34170093  0.12194519  3.08657612 -0.37175024]
+T test for xpln - confidence -  [7.96235986e-01 7.34851228e-01 7.14904291e-01 1.14989780e-04
+ 1.80881203e-01]
+%%%%%%%%%%%%%%%
+
+&AEXP- &EFFORT- &LOC+ &PLEX- &RISK- 
+all  & 2.97 & 30816.28 & 1013.12 & 3.05 & 6.69
+sway  & 2.88 & 16526.24 & 905.49 & 3.14 & 4.86
+sway_1  & 3.05 & 31372.97 & 989.74 & 2.9 & 7.13
+xpln  & 2.92 & 34143.39 & 1032.44 & 3.06 & 6.84
+xpln_1  & 2.96 & 30702.9 & 1006.06 & 3.03 & 8.09
+ztop  & 2.82 & 29574.65 & 1015.47 & 3.53 & 6.06
+.
+&AEXP- &EFFORT- &LOC+ &PLEX- &RISK- 
+all to all &=&=&=&=&=
+all to sway &=&≠&=&=&≠
+all to sway_1 &=&=&=&=&≠
+all to xpln &≠&=&=&=&=
+all to xpln_1 &=&=&=&=&≠
+all to ztop &=&=&=&≠&=
+ rule size mu 1.0 std 0.0
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/pom.csv
+          0         1         2
+0  1.000000  0.041783  0.001001
+1  0.041783  1.000000  0.532163
+2  0.001001  0.532163  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  108
+number of rest improved :  432
+Rule : [{'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}]
+Most: 0.4999999999991406
+Using rule :  {'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'InterDependency': {'max': 10000000000, 'min': 89.0, 'at': 4}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  80
+number of rest :  320
+number of best improved :  163
+number of rest improved :  652
+Rule : [{'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}]
+Most: 0.4999999999991406
+Using rule :  {'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'InterDependency': {'max': 10000000000, 'min': 90.0, 'at': 4}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  134
+number of rest improved :  536
+Rule : [{'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}]
+Most: 0.4999999999991297
+Using rule :  {'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'InterDependency': {'max': 10000000000, 'min': 89.0, 'at': 4}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  78
+number of rest :  312
+number of best improved :  144
+number of rest improved :  576
+Rule : [{'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}]
+Most: 0.4999999999991186
+Using rule :  {'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'Team Size': {'max': 18.0, 'min': 17.0, 'at': 8}}
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+total number of rows :  10000
+number of best :  79
+number of rest :  316
+number of best improved :  143
+number of rest improved :  572
+Rule : [{'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}]
+Most: 0.4999999999991297
+Using rule :  {'Size': {'max': 10000000000, 'min': -10000000000, 'at': 6}}
+Using second rule :  {'Team Size': {'max': 10000000000, 'min': 18.0, 'at': 8}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['Cost-', 'Completion+', 'Idle-']
+T test for sway - significance -  [ 1.39551871 -0.12845909  0.68483012]
+T test for sway - confidence -  [0.08894915 0.69097676 0.57669509]
+T test for xpln - significance -  [1.14935951 0.67390834 0.06527042]
+T test for xpln - confidence -  [0.60075835 0.59660476 0.92317182]
+%%%%%%%%%%%%%%%
+
+&Completion+ &Cost- &Idle- 
+all  & 0.87 & 370.0 & 0.24
+sway  & 0.86 & 312.93 & 0.22
+sway_1  & 0.86 & 344.96 & 0.24
+xpln  & 0.87 & 369.99 & 0.24
+xpln_1  & 0.87 & 372.83 & 0.24
+ztop  & 0.85 & 368.05 & 0.22
+.
+&Completion+ &Cost- &Idle- 
+all to all &=&=&=
+all to sway &=&≠&=
+all to sway_1 &=&≠&=
+all to xpln &=&=&=
+all to xpln_1 &=&=&=
+all to ztop &=&=&=
+ rule size mu 1.0 std 0.0
+<<<<<<<<<<===============>>>>>>>>>>
+
+
+
+
+<<<<<<<<<<===============>>>>>>>>>>
+Currently processing file :  ../etc/data/china.csv
+          0         1         2
+0  1.000000  0.063939  0.068739
+1  0.063939  1.000000  0.986331
+2  0.068739  0.986331  1.000000
+********************
+Iteration :  1
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  499
+number of best :  15
+number of rest :  60
+number of best improved :  29
+number of rest improved :  116
+None type ranges found
+None type ranges found
+Rule : [{'NPDR_AFP': {'max': 2.9, 'min': -10000000000, 'at': 12}}]
+Most: 0.7511111111056029
+Using rule :  {'NPDR_AFP': {'max': 2.9, 'min': -10000000000, 'at': 12}}
+Using second rule :  {'AFP': {'max': 449.0, 'min': -10000000000, 'at': 1}}
+--------------------
+********************
+Iteration :  2
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  499
+number of best :  16
+number of rest :  64
+number of best improved :  30
+number of rest improved :  120
+None type ranges found
+None type ranges found
+Rule : [{'NPDR_AFP': {'max': 3.1, 'min': -10000000000, 'at': 12}}]
+Most: 0.9142857142796328
+Using rule :  {'NPDR_AFP': {'max': 3.1, 'min': -10000000000, 'at': 12}}
+Using second rule :  {'AFP': {'max': 449.0, 'min': -10000000000, 'at': 1}}
+--------------------
+********************
+Iteration :  3
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  499
+number of best :  17
+number of rest :  68
+number of best improved :  26
+number of rest improved :  104
+None type ranges found
+None type ranges found
+Rule : [{'Output': {'max': 79.0, 'min': -10000000000, 'at': 3}}, {'Output': {'max': 79.0, 'min': -10000000000, 'at': 3}, 'Added': {'max': 409.0, 'min': -10000000000, 'at': 7}}]
+Most: 0.6476190476142313
+Using rule :  {'Output': {'max': 79.0, 'min': -10000000000, 'at': 3}}
+Using second rule :  {'Changed': {'max': 108.0, 'min': -10000000000, 'at': 8}}
+--------------------
+********************
+Iteration :  4
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  499
+number of best :  16
+number of rest :  64
+number of best improved :  29
+number of rest improved :  116
+None type ranges found
+None type ranges found
+rule generation failed
+--------------------
+********************
+Iteration :  5
+Evaluation :  0
+Evaluation :  1
+Evaluation :  2
+Evaluation :  3
+Evaluation :  4
+Evaluation :  5
+Evaluation :  6
+Evaluation :  7
+total number of rows :  499
+number of best :  16
+number of rest :  64
+number of best improved :  29
+number of rest improved :  116
+None type ranges found
+None type ranges found
+Rule : [{'Added': {'max': 334.0, 'min': -10000000000, 'at': 7}}, {'Added': {'max': 334.0, 'min': -10000000000, 'at': 7}, 'AFP': {'max': 558.0, 'min': -10000000000, 'at': 1}}]
+Most: 0.5765765765718287
+Using rule :  {'Added': {'max': 334.0, 'min': -10000000000, 'at': 7}}
+Using second rule :  {'PDR_AFP': {'max': 2.3, 'min': -10000000000, 'at': 10}}
+--------------------
+
+%%%%%%%%%%%%%%%
+NOTE: signficance values have to be negative to indicate better perf, lower p values indicate more confidence
+Target columns :  ['N_effort-']
+T test for sway - significance -  [-5.07066015]
+T test for sway - confidence -  [0.08978277]
+T test for xpln - significance -  [1.82950238]
+T test for xpln - confidence -  [0.00054942]
+%%%%%%%%%%%%%%%
+
+&N_effort- 
+all  & 4277.64
+sway  & 874.84
+sway_1  & 233.16
+xpln  & 2223.4
+xpln_1  & 2895.14
+ztop  & 3177.08
+.
+&N_effort- 
+all to all &=
+all to sway &≠
+all to sway_1 &≠
+all to xpln &≠
+all to xpln_1 &≠
+all to ztop &≠
+ rule size mu 1.5 std 0.577
+<<<<<<<<<<===============>>>>>>>>>>
+
+
